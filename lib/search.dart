@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'filter_list.dart';
+import 'major_field.dart';
 
-class Search extends StatelessWidget {
+class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
+
+  @override
+  State<Search> createState() => _SearchState();
+}
+
+class _SearchState extends State<Search> {
+  String major_field_range = '전체';
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +31,30 @@ class Search extends StatelessWidget {
                     padding: const EdgeInsets.all(16.0),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     //Navigator.push(context, MaterialPageRoute(builder: (context) => FilterList()));
-                    Navigator.push(context, PageTransition(child: FilterList(), type: PageTransitionType.bottomToTop));
+                    final res = await Navigator.push(
+                      context,
+                      PageTransition(
+                        child: const MajorFieldList(),
+                        type: PageTransitionType.bottomToTop,
+                      ),
+                    );
+                    if (res != null) {
+                      setState(() {
+                        major_field_range = res;
+                      });
+                    }
                   },
-                  child: const Text.rich(
+                  child: Text.rich(
                     TextSpan(
                       children: <TextSpan>[
-                        TextSpan(
+                        const TextSpan(
                           text: '전공/영역: ',
                           style: TextStyle(fontSize: 20),
                         ),
                         TextSpan(
-                          text: '전체',
+                          text: major_field_range,
                           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ],
