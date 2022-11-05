@@ -1,0 +1,1852 @@
+[{
+  "subject": [
+    {
+      "id": "5600656",
+      "code": "10184001",
+      "name": "마케팅",
+      "professor": "김현구",
+      "type": "전선",
+      "time": "월E ,수E",
+      "place": "AI공학관-411,AI공학관-301",
+      "credit": "3",
+      "capacity": "70",
+      "popular": "87",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455077",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "192",
+          "end": "207",
+          "place": "AI공학관-411"
+        },
+        {
+          "day": "2",
+          "start": "192",
+          "end": "207",
+          "place": "AI공학관-301"
+        }
+      ]
+    },
+    {
+      "id": "5600793",
+      "code": "11258001",
+      "name": "HCI (영어강의)",
+      "professor": "최아영",
+      "type": "전선",
+      "time": "월D ,화D",
+      "place": "AI공학관-301,AI공학관-411",
+      "credit": "3",
+      "capacity": "50",
+      "popular": "65",
+      "target": "",
+      "notice": "",
+      "lectureId": "2027418",
+      "lectureRate": "4.14",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "174",
+          "end": "189",
+          "place": "AI공학관-301"
+        },
+        {
+          "day": "1",
+          "start": "174",
+          "end": "189",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5600794",
+      "code": "11258002",
+      "name": "HCI (영어강의)",
+      "professor": "최아영",
+      "type": "전선",
+      "time": "월E ,화E",
+      "place": "AI공학관-301,AI공학관-411",
+      "credit": "3",
+      "capacity": "50",
+      "popular": "24",
+      "target": "",
+      "notice": "",
+      "lectureId": "2027418",
+      "lectureRate": "4.14",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "192",
+          "end": "207",
+          "place": "AI공학관-301"
+        },
+        {
+          "day": "1",
+          "start": "192",
+          "end": "207",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5601144",
+      "code": "12445001",
+      "name": "자료구조 (SW ELITE 부전공)(사이버)",
+      "professor": "이정훈",
+      "type": "전선",
+      "time": "수7 ,수8",
+      "place": "IT대학-511",
+      "credit": "2",
+      "capacity": "60",
+      "popular": "42",
+      "target": "",
+      "notice": "",
+      "lectureId": "2333134",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "2",
+        "start": "180",
+        "end": "204",
+        "place": "IT대학-511"
+      }
+    },
+    {
+      "id": "5601302",
+      "code": "12633001",
+      "name": "알고리즘 (SW ELITE 부전공)(사이버)",
+      "professor": "양순옥",
+      "type": "전선",
+      "time": "금7 ,금8",
+      "place": "IT대학-511",
+      "credit": "2",
+      "capacity": "60",
+      "popular": "34",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455216",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "4",
+        "start": "180",
+        "end": "204",
+        "place": "IT대학-511"
+      }
+    },
+    {
+      "id": "5601363",
+      "code": "12739001",
+      "name": "IT와 창업 (P/F)",
+      "professor": "이수찬",
+      "type": "전선",
+      "time": "수10 ,수11",
+      "place": "IT대학-117",
+      "credit": "2",
+      "capacity": "16",
+      "popular": "46",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455224",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "2",
+        "start": "216",
+        "end": "240",
+        "place": "IT대학-117"
+      }
+    },
+    {
+      "id": "5601564",
+      "code": "13014001",
+      "name": "기업과 리더십 (실시간화상강의)",
+      "professor": "강상우",
+      "type": "전필",
+      "time": "화3 ,화4",
+      "place": "AI공학관-414",
+      "credit": "2",
+      "capacity": "110",
+      "popular": "146",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332114",
+      "lectureRate": "2.39",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "1",
+        "start": "132",
+        "end": "156",
+        "place": "AI공학관-414"
+      }
+    },
+    {
+      "id": "5601923",
+      "code": "13187001",
+      "name": "데이터베이스2 (영어강의)",
+      "professor": "정옥란",
+      "type": "전선",
+      "time": "수D ,목E",
+      "place": "AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "27",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332278",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "2",
+          "start": "174",
+          "end": "189",
+          "place": "AI공학관-304"
+        },
+        {
+          "day": "3",
+          "start": "192",
+          "end": "207",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5601924",
+      "code": "13188001",
+      "name": "사이버보안 (영어강의)",
+      "professor": "한명묵",
+      "type": "전선",
+      "time": "월C ,수C",
+      "place": "AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "44",
+      "target": "",
+      "notice": "",
+      "lectureId": "2191743",
+      "lectureRate": "1.6",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "156",
+          "end": "171",
+          "place": "AI공학관-304"
+        },
+        {
+          "day": "2",
+          "start": "156",
+          "end": "171",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5602611",
+      "code": "13680001",
+      "name": "모바일 웹 프로그래밍 (SW ELITE 부전공)(사이버)",
+      "professor": "배정미",
+      "type": "전선",
+      "time": "목7 ,목8",
+      "place": "IT대학-511",
+      "credit": "2",
+      "capacity": "60",
+      "popular": "31",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455454",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "3",
+        "start": "180",
+        "end": "204",
+        "place": "IT대학-511"
+      }
+    },
+    {
+      "id": "5602822",
+      "code": "14232001",
+      "name": "딥 러닝 (SW ELITE 부전공)(사이버)",
+      "professor": "성보경",
+      "type": "전선",
+      "time": "화7 ,화8",
+      "place": "IT대학-511",
+      "credit": "2",
+      "capacity": "60",
+      "popular": "34",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455553",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "1",
+        "start": "180",
+        "end": "204",
+        "place": "IT대학-511"
+      }
+    },
+    {
+      "id": "5602823",
+      "code": "14233001",
+      "name": "빅데이터 (SW ELITE 부전공)(사이버)",
+      "professor": "양순옥",
+      "type": "전선",
+      "time": "월7 ,월8",
+      "place": "IT대학-511",
+      "credit": "2",
+      "capacity": "60",
+      "popular": "24",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455554",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "0",
+        "start": "180",
+        "end": "204",
+        "place": "IT대학-511"
+      }
+    },
+    {
+      "id": "5602952",
+      "code": "14451001",
+      "name": "SW신기술특론 (영어강의)",
+      "professor": "안종현",
+      "type": "전선",
+      "time": "목5 ,목6 ,목7",
+      "place": "AI공학관-414",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "44",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455632",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "3",
+        "start": "156",
+        "end": "192",
+        "place": "AI공학관-414"
+      }
+    },
+    {
+      "id": "5602954",
+      "code": "14452001",
+      "name": "VR과 AR (영어강의)",
+      "professor": "정윤현",
+      "type": "전선",
+      "time": "월7 ,화5 ,화6",
+      "place": "AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "41",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332298",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "180",
+          "end": "192",
+          "place": "AI공학관-304"
+        },
+        {
+          "day": "1",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5602955",
+      "code": "14464001",
+      "name": "컴퓨터네트워크 및 실습 (영어강의)",
+      "professor": "최재혁",
+      "type": "전선",
+      "time": "월2 ,월3 ,목2",
+      "place": "AI공학관-414",
+      "credit": "3",
+      "capacity": "50",
+      "popular": "66",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077535",
+      "lectureRate": "4.45",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "3",
+          "start": "120",
+          "end": "132",
+          "place": "AI공학관-414"
+        }
+      ]
+    },
+    {
+      "id": "5602957",
+      "code": "14464003",
+      "name": "컴퓨터네트워크 및 실습 (영어강의)",
+      "professor": "유준",
+      "type": "전선",
+      "time": "화3 ,화4 ,수3",
+      "place": "AI공학관-509",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "38",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077536",
+      "lectureRate": "4.4",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "132",
+          "end": "156",
+          "place": "AI공학관-509"
+        },
+        {
+          "day": "2",
+          "start": "132",
+          "end": "144",
+          "place": "AI공학관-509"
+        }
+      ]
+    },
+    {
+      "id": "5602958",
+      "code": "14464004",
+      "name": "컴퓨터네트워크 및 실습 (영어강의)",
+      "professor": "유준",
+      "type": "전선",
+      "time": "화5 ,화6 ,수5",
+      "place": "AI공학관-509",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "56",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077536",
+      "lectureRate": "4.4",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-509"
+        },
+        {
+          "day": "2",
+          "start": "156",
+          "end": "168",
+          "place": "AI공학관-509"
+        }
+      ]
+    },
+    {
+      "id": "5602959",
+      "code": "14464005",
+      "name": "컴퓨터네트워크 및 실습 (영어강의)",
+      "professor": "이주형",
+      "type": "전선",
+      "time": "화5 ,화6 ,목3",
+      "place": "AI공학관-414",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "57",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077537",
+      "lectureRate": "4.92",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "3",
+          "start": "132",
+          "end": "144",
+          "place": "AI공학관-414"
+        }
+      ]
+    },
+    {
+      "id": "5602961",
+      "code": "14465001",
+      "name": "알고리즘 (영어강의)",
+      "professor": "최기호",
+      "type": "전선",
+      "time": "화3 ,화4 ,목7",
+      "place": "AI공학관-413,AI공학관-301",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "48",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332854",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "132",
+          "end": "156",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "3",
+          "start": "180",
+          "end": "192",
+          "place": "AI공학관-301"
+        }
+      ]
+    },
+    {
+      "id": "5602963",
+      "code": "14465003",
+      "name": "알고리즘 (영어강의)",
+      "professor": "정옥란",
+      "type": "전선",
+      "time": "화7 ,화8 ,목6",
+      "place": "AI공학관-301",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "66",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077529",
+      "lectureRate": "4.09",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-301"
+        },
+        {
+          "day": "3",
+          "start": "168",
+          "end": "180",
+          "place": "AI공학관-301"
+        }
+      ]
+    },
+    {
+      "id": "5602964",
+      "code": "14465004",
+      "name": "알고리즘 (영어강의)",
+      "professor": "정옥란",
+      "type": "전선",
+      "time": "화5 ,화6 ,목5",
+      "place": "AI공학관-301",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "49",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077529",
+      "lectureRate": "4.09",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-301"
+        },
+        {
+          "day": "3",
+          "start": "156",
+          "end": "168",
+          "place": "AI공학관-301"
+        }
+      ]
+    },
+    {
+      "id": "5602965",
+      "code": "14465005",
+      "name": "알고리즘 (영어강의)",
+      "professor": "이상웅",
+      "type": "전선",
+      "time": "화2 ,수3 ,수4",
+      "place": "AI공학관-412",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "33",
+      "target": "",
+      "notice": "",
+      "lectureId": "2077530",
+      "lectureRate": "4",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "120",
+          "end": "132",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "2",
+          "start": "132",
+          "end": "156",
+          "place": "AI공학관-412"
+        }
+      ]
+    },
+    {
+      "id": "5602967",
+      "code": "14466001",
+      "name": "데이터베이스 및 실습 (영어강의)",
+      "professor": "최재영",
+      "type": "전선",
+      "time": "월5 ,월6 ,목5",
+      "place": "AI공학관-411",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "66",
+      "target": "",
+      "notice": "",
+      "lectureId": "2192247",
+      "lectureRate": "3.36",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-411"
+        },
+        {
+          "day": "3",
+          "start": "156",
+          "end": "168",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5602969",
+      "code": "14466003",
+      "name": "데이터베이스 및 실습 (영어강의)",
+      "professor": "신성",
+      "type": "전선",
+      "time": "월8 ,목7 ,목8",
+      "place": "AI공학관-407,AI공학관-413",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "70",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455635",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "192",
+          "end": "204",
+          "place": "AI공학관-407"
+        },
+        {
+          "day": "3",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-413"
+        }
+      ]
+    },
+    {
+      "id": "5602970",
+      "code": "14466004",
+      "name": "데이터베이스 및 실습 (영어강의)",
+      "professor": "최재용",
+      "type": "전선",
+      "time": "수2 ,수3 ,금5",
+      "place": "AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "46",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455636",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "2",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-304"
+        },
+        {
+          "day": "4",
+          "start": "156",
+          "end": "168",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5602971",
+      "code": "14466005",
+      "name": "데이터베이스 및 실습 (영어강의)",
+      "professor": "최재용",
+      "type": "전선",
+      "time": "수4 ,금3 ,금4",
+      "place": "AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "56",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455636",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "2",
+          "start": "144",
+          "end": "156",
+          "place": "AI공학관-304"
+        },
+        {
+          "day": "4",
+          "start": "132",
+          "end": "156",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5602996",
+      "code": "14511001",
+      "name": "오픈소스SW (실시간화상강의)(영어강의)(P/F)",
+      "professor": "오영민",
+      "type": "전선",
+      "time": "수9",
+      "place": "AI공학관-304",
+      "credit": "1",
+      "capacity": "100",
+      "popular": "137",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455652",
+      "lectureRate": "4.25",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "2",
+        "start": "204",
+        "end": "216",
+        "place": "AI공학관-304"
+      }
+    },
+    {
+      "id": "5602998",
+      "code": "14512001",
+      "name": "로봇공학 (영어강의)",
+      "professor": "민홍",
+      "type": "전필",
+      "time": "월6 ,월7 ,월8",
+      "place": "AI공학관-511",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "47",
+      "target": "",
+      "notice": "",
+      "lectureId": "2331920",
+      "lectureRate": "4.67",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "0",
+        "start": "168",
+        "end": "204",
+        "place": "AI공학관-511"
+      }
+    },
+    {
+      "id": "5603000",
+      "code": "14512003",
+      "name": "로봇공학 (영어강의)",
+      "professor": "오영민",
+      "type": "전필",
+      "time": "월6 ,월7 ,월8",
+      "place": "AI공학관-509",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "41",
+      "target": "",
+      "notice": "",
+      "lectureId": "2331921",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "0",
+        "start": "168",
+        "end": "204",
+        "place": "AI공학관-509"
+      }
+    },
+    {
+      "id": "5603001",
+      "code": "14512004",
+      "name": "로봇공학 (영어강의)",
+      "professor": "최재영",
+      "type": "전필",
+      "time": "화6 ,화7 ,화8",
+      "place": "AI공학관-412",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "56",
+      "target": "",
+      "notice": "",
+      "lectureId": "2191281",
+      "lectureRate": "3.9",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "1",
+        "start": "168",
+        "end": "204",
+        "place": "AI공학관-412"
+      }
+    },
+    {
+      "id": "5603002",
+      "code": "14512005",
+      "name": "로봇공학 (영어강의)",
+      "professor": "강상우",
+      "type": "전필",
+      "time": "화6 ,화7 ,화8",
+      "place": "AI공학관-413",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "46",
+      "target": "",
+      "notice": "",
+      "lectureId": "2027356",
+      "lectureRate": "3.59",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "1",
+        "start": "168",
+        "end": "204",
+        "place": "AI공학관-413"
+      }
+    },
+    {
+      "id": "5603006",
+      "code": "14513001",
+      "name": "문제해결기법 (영어강의)",
+      "professor": "차영운",
+      "type": "전필",
+      "time": "월5 ,월6 ,수3",
+      "place": "AI공학관-413",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "40",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332532",
+      "lectureRate": "2.71",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "2",
+          "start": "132",
+          "end": "144",
+          "place": "AI공학관-413"
+        }
+      ]
+    },
+    {
+      "id": "5603008",
+      "code": "14513003",
+      "name": "문제해결기법 (영어강의)",
+      "professor": "조정찬",
+      "type": "전필",
+      "time": "월5 ,월6 ,수3",
+      "place": "AI공학관-414",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "41",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332529",
+      "lectureRate": "3.8",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "156",
+          "end": "180",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "2",
+          "start": "132",
+          "end": "144",
+          "place": "AI공학관-414"
+        }
+      ]
+    },
+    {
+      "id": "5603009",
+      "code": "14513004",
+      "name": "문제해결기법 (영어강의)",
+      "professor": "최기호",
+      "type": "전필",
+      "time": "화5 ,목3 ,목4",
+      "place": "AI공학관-413",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "75",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332530",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "156",
+          "end": "168",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "3",
+          "start": "132",
+          "end": "156",
+          "place": "AI공학관-413"
+        }
+      ]
+    },
+    {
+      "id": "5603010",
+      "code": "14513005",
+      "name": "문제해결기법 (영어강의)",
+      "professor": "박옥자",
+      "type": "전필",
+      "time": "월9 ,목3 ,목4",
+      "place": "AI공학관-412",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "53",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455653",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "204",
+          "end": "216",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "3",
+          "start": "132",
+          "end": "156",
+          "place": "AI공학관-412"
+        }
+      ]
+    },
+    {
+      "id": "5603032",
+      "code": "14564001",
+      "name": "차세대 챗봇 Lab Ⅱ",
+      "professor": "최성자",
+      "type": "전선",
+      "time": "화1 ,화2 ,화3 ,화4 ,목1 ,목2 ,목3 ,목4",
+      "place": "AI공학관-411",
+      "credit": "3",
+      "capacity": "0",
+      "popular": "33",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455669",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "108",
+          "end": "156",
+          "place": "AI공학관-411"
+        },
+        {
+          "day": "3",
+          "start": "108",
+          "end": "156",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5603033",
+      "code": "14566001",
+      "name": "데이터관리기술 Lab Ⅱ",
+      "professor": "오영석",
+      "type": "전선",
+      "time": "월1 ,월2 ,월3 ,월4 ,수1 ,수2 ,수3 ,수4",
+      "place": "AI공학관-411",
+      "credit": "3",
+      "capacity": "0",
+      "popular": "52",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455670",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "108",
+          "end": "156",
+          "place": "AI공학관-411"
+        },
+        {
+          "day": "2",
+          "start": "108",
+          "end": "156",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5603034",
+      "code": "14568001",
+      "name": "시스템아키텍처 Lab Ⅱ",
+      "professor": "김도성",
+      "type": "전선",
+      "time": "금1 ,금2 ,금3 ,금4 ,금6 ,금7 ,금8 ,금9",
+      "place": "AI공학관-411",
+      "credit": "3",
+      "capacity": "0",
+      "popular": "50",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455671",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "4",
+          "start": "108",
+          "end": "156",
+          "place": "AI공학관-411"
+        },
+        {
+          "day": "4",
+          "start": "168",
+          "end": "216",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5603036",
+      "code": "14571002",
+      "name": "경영학의 이해",
+      "professor": "김현구",
+      "type": "전필",
+      "time": "월C ,수C",
+      "place": "AI공학관-301",
+      "credit": "3",
+      "capacity": "70",
+      "popular": "91",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455672",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "156",
+          "end": "171",
+          "place": "AI공학관-301"
+        },
+        {
+          "day": "2",
+          "start": "156",
+          "end": "171",
+          "place": "AI공학관-301"
+        }
+      ]
+    },
+    {
+      "id": "5603037",
+      "code": "14571003",
+      "name": "경영학의 이해",
+      "professor": "김현구",
+      "type": "전필",
+      "time": "화B ,목B",
+      "place": "AI공학관-301",
+      "credit": "3",
+      "capacity": "70",
+      "popular": "86",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455672",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "132",
+          "end": "147",
+          "place": "AI공학관-301"
+        },
+        {
+          "day": "3",
+          "start": "132",
+          "end": "147",
+          "place": "AI공학관-301"
+        }
+      ]
+    },
+    {
+      "id": "5603054",
+      "code": "14585001",
+      "name": "AR/VR/Metaverse (SW ELITE 부전공)(사이버)",
+      "professor": "송근실",
+      "type": "전선",
+      "time": "목9 ,목10",
+      "place": "IT대학-511",
+      "credit": "2",
+      "capacity": "60",
+      "popular": "60",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455677",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "3",
+        "start": "204",
+        "end": "228",
+        "place": "IT대학-511"
+      }
+    },
+    {
+      "id": "5603058",
+      "code": "59996001",
+      "name": "P-실무프로젝트 (4주/학과프로젝트)(팀티칭)",
+      "professor": "정윤현",
+      "type": "전필",
+      "time": "월10 ,월11 ,월12 ,화10 ,화11 ,화12 ,수10 ,수11 ,수12 ,목10 ,목11 ,목12 ,금10 ,금11 ,금12",
+      "place": "AI공학관-412",
+      "credit": "2",
+      "capacity": "40",
+      "popular": "36",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455679",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "1",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "2",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "3",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "4",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-412"
+        }
+      ]
+    },
+    {
+      "id": "5603060",
+      "code": "59996003",
+      "name": "P-실무프로젝트 (4주/학과프로젝트)(팀티칭)",
+      "professor": "최기호",
+      "type": "전필",
+      "time": "월10 ,월11 ,월12 ,화10 ,화11 ,화12 ,수10 ,수11 ,수12 ,목10 ,목11 ,목12 ,금10 ,금11 ,금12",
+      "place": "AI공학관-413",
+      "credit": "2",
+      "capacity": "40",
+      "popular": "29",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455681",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "1",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "2",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "3",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-413"
+        },
+        {
+          "day": "4",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-413"
+        }
+      ]
+    },
+    {
+      "id": "5603061",
+      "code": "59996004",
+      "name": "P-실무프로젝트 (4주/학과프로젝트)(팀티칭)",
+      "professor": "이주형",
+      "type": "전필",
+      "time": "월10 ,월11 ,월12 ,화10 ,화11 ,화12 ,수10 ,수11 ,수12 ,목10 ,목11 ,목12 ,금10 ,금11 ,금12",
+      "place": "AI공학관-414",
+      "credit": "2",
+      "capacity": "40",
+      "popular": "22",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455682",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "1",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "2",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "3",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "4",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-414"
+        }
+      ]
+    },
+    {
+      "id": "5603062",
+      "code": "59996005",
+      "name": "P-실무프로젝트 (4주/학과프로젝트)(팀티칭)",
+      "professor": "민홍",
+      "type": "전필",
+      "time": "월10 ,월11 ,월12 ,화10 ,화11 ,화12 ,수10 ,수11 ,수12 ,목10 ,목11 ,목12 ,금10 ,금11 ,금12",
+      "place": "AI공학관-511",
+      "credit": "2",
+      "capacity": "40",
+      "popular": "29",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455683",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "1",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "2",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "3",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "4",
+          "start": "216",
+          "end": "252",
+          "place": "AI공학관-511"
+        }
+      ]
+    },
+    {
+      "id": "5603371",
+      "code": "61225001",
+      "name": "컴퓨터구조 (12주)(영어강의)",
+      "professor": "정용주",
+      "type": "전선",
+      "time": "화7 ,화8 ,목7 ,목8",
+      "place": "AI공학관-511,AI공학관-411",
+      "credit": "3",
+      "capacity": "50",
+      "popular": "58",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332685",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "3",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-411"
+        }
+      ]
+    },
+    {
+      "id": "5603373",
+      "code": "61225003",
+      "name": "컴퓨터구조 (12주)(영어강의)",
+      "professor": "오현영",
+      "type": "전선",
+      "time": "화7 ,화8 ,수7 ,수8",
+      "place": "AI공학관-414",
+      "credit": "3",
+      "capacity": "50",
+      "popular": "53",
+      "target": "",
+      "notice": "",
+      "lectureId": "2455778",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-414"
+        },
+        {
+          "day": "2",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-414"
+        }
+      ]
+    },
+    {
+      "id": "5603512",
+      "code": "61376001",
+      "name": "드론과 로보틱스 (12주)(영어강의)",
+      "professor": "민홍",
+      "type": "전선",
+      "time": "월4 ,월5 ,수2 ,수3",
+      "place": "AI공학관-511",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "46",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332690",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "144",
+          "end": "168",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "2",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-511"
+        }
+      ]
+    },
+    {
+      "id": "5603528",
+      "code": "61407001",
+      "name": "컴퓨터그래픽스 (12주)(영어강의)",
+      "professor": "조정찬",
+      "type": "전선",
+      "time": "월2 ,월3 ,목2 ,목3",
+      "place": "AI공학관-412,AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "44",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332687",
+      "lectureRate": "2",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "3",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5603529",
+      "code": "61407002",
+      "name": "컴퓨터그래픽스 (12주)(영어강의)",
+      "professor": "정윤현",
+      "type": "전선",
+      "time": "월4 ,월5 ,목4 ,목5",
+      "place": "AI공학관-509",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "48",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332686",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "144",
+          "end": "168",
+          "place": "AI공학관-509"
+        },
+        {
+          "day": "3",
+          "start": "144",
+          "end": "168",
+          "place": "AI공학관-509"
+        }
+      ]
+    },
+    {
+      "id": "5603530",
+      "code": "61407003",
+      "name": "컴퓨터그래픽스 (12주)(영어강의)",
+      "professor": "정윤현",
+      "type": "전선",
+      "time": "월2 ,월3 ,목2 ,목3",
+      "place": "AI공학관-511",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "56",
+      "target": "",
+      "notice": "",
+      "lectureId": "2332686",
+      "lectureRate": "5",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-511"
+        },
+        {
+          "day": "3",
+          "start": "120",
+          "end": "144",
+          "place": "AI공학관-511"
+        }
+      ]
+    },
+    {
+      "id": "5623564",
+      "code": "14602001",
+      "name": "머신러닝 (15주)(영어강의)",
+      "professor": "김원",
+      "type": "전선",
+      "time": "수6 ,수7 ,수8",
+      "place": "AI공학관-511",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "34",
+      "target": "",
+      "notice": "",
+      "lectureId": "2456147",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "2",
+        "start": "168",
+        "end": "204",
+        "place": "AI공학관-511"
+      }
+    },
+    {
+      "id": "5626159",
+      "code": "14602003",
+      "name": "머신러닝 (15주)(영어강의)",
+      "professor": "김원",
+      "type": "전선",
+      "time": "화1 ,화2 ,화3",
+      "place": "AI공학관-511",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "39",
+      "target": "",
+      "notice": "",
+      "lectureId": "2456147",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": {
+        "day": "1",
+        "start": "108",
+        "end": "144",
+        "place": "AI공학관-511"
+      }
+    },
+    {
+      "id": "5668611",
+      "code": "14564002",
+      "name": "차세대 챗봇 Lab Ⅱ",
+      "professor": "신성",
+      "type": "전선",
+      "time": "화1 ,화2 ,화3 ,화4 ,목1 ,목2 ,목3 ,목4",
+      "place": "AI공학관-306,IT대학-117",
+      "credit": "3",
+      "capacity": "0",
+      "popular": "19",
+      "target": "",
+      "notice": "",
+      "lectureId": "2456165",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "108",
+          "end": "156",
+          "place": "AI공학관-306"
+        },
+        {
+          "day": "3",
+          "start": "108",
+          "end": "156",
+          "place": "IT대학-117"
+        }
+      ]
+    },
+    {
+      "id": "5842558",
+      "code": "61225004",
+      "name": "컴퓨터구조 (12주)(영어강의)",
+      "professor": "최재용",
+      "type": "전선",
+      "time": "화7 ,화8 ,목6 ,목7",
+      "place": "AI공학관-304",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "40",
+      "target": "",
+      "notice": "",
+      "lectureId": "2456295",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "1",
+          "start": "180",
+          "end": "204",
+          "place": "AI공학관-304"
+        },
+        {
+          "day": "3",
+          "start": "168",
+          "end": "192",
+          "place": "AI공학관-304"
+        }
+      ]
+    },
+    {
+      "id": "5842559",
+      "code": "61376002",
+      "name": "드론과 로보틱스 (12주)(영어강의)",
+      "professor": "오현영",
+      "type": "전선",
+      "time": "월4 ,월5 ,수1 ,수2",
+      "place": "AI공학관-412,AI공학관-413",
+      "credit": "3",
+      "capacity": "40",
+      "popular": "34",
+      "target": "",
+      "notice": "",
+      "lectureId": "2456296",
+      "lectureRate": "0",
+      "misc1": "",
+      "misc2": "",
+      "misc3": "",
+      "misc4": "",
+      "timeplace": [
+        {
+          "day": "0",
+          "start": "144",
+          "end": "168",
+          "place": "AI공학관-412"
+        },
+        {
+          "day": "2",
+          "start": "108",
+          "end": "132",
+          "place": "AI공학관-413"
+        }
+      ]
+    }
+  ]
+}]
