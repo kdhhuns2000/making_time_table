@@ -2,21 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'major_field.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: Search(),
-      ),
-    );
-  }
-}
-
-
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
 
@@ -79,22 +64,22 @@ class _SearchState extends State<Search> {
               ),
             ],
           ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(30),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                disabledBackgroundColor: Colors.grey,
-                fixedSize: const Size(double.maxFinite, double.infinity),
-                textStyle: const TextStyle(fontSize: 30.0),
-              ),
-              onPressed: () {},
-              child: const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text('시간표 검색'),
-              ),
-            ),
-          ),
+          // ClipRRect(
+          //   borderRadius: BorderRadius.circular(30),
+          //   child: ElevatedButton(
+          //     style: ElevatedButton.styleFrom(
+          //       backgroundColor: Colors.deepPurple,
+          //       disabledBackgroundColor: Colors.grey,
+          //       fixedSize: const Size(double.maxFinite, double.infinity),
+          //       textStyle: const TextStyle(fontSize: 30.0),
+          //     ),
+          //     onPressed: () {},
+          //     child: const Padding(
+          //       padding: EdgeInsets.all(10.0),
+          //       child: Text('시간표 검색'),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

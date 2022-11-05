@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'search.dart';
+import 'home.dart';
 
 void main() {
   runApp(const Main());
