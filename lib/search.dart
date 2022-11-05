@@ -12,15 +12,28 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  String major_field_range = '선택';
-  TextEditingController _textController = TextEditingController();
+  String majorFieldRange = '선택';
+  final TextEditingController _textController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _textController.addListener(() {
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -43,8 +56,8 @@ class _SearchState extends State<Search> {
                           style: TextStyle(fontSize: 20),
                         ),
                         TextSpan(
-                          text: major_field_range,
-                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          text: majorFieldRange,
+                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -63,30 +76,17 @@ class _SearchState extends State<Search> {
             },
             rtl: true,
           ),
-          Expanded(child: SubjectTile(searchText: _textController.text,)),
-          // ClipRRect(
-          //   borderRadius: BorderRadius.circular(30),
-          //   child: ElevatedButton(
-          //     style: ElevatedButton.styleFrom(
-          //       backgroundColor: Colors.deepPurple,
-          //       disabledBackgroundColor: Colors.grey,
-          //       fixedSize: const Size(double.maxFinite, double.infinity),
-          //       textStyle: const TextStyle(fontSize: 30.0),
-          //     ),
-          //     onPressed: () {},
-          //     child: const Padding(
-          //       padding: EdgeInsets.all(10.0),
-          //       child: Text('시간표 검색'),
-          //     ),
-          //   ),
-          // ),
+          Expanded(
+            child: SubjectTile(
+              searchText: _textController.text,
+            ),
+          ),
         ],
       ),
     );
   }
 
   Future _onPressed() async {
-    //Navigator.push(context, MaterialPageRoute(builder: (context) => FilterList()));
     final res = await Navigator.push(
       context,
       PageTransition(
@@ -96,7 +96,7 @@ class _SearchState extends State<Search> {
     );
     if (res != null) {
       setState(() {
-        major_field_range = res;
+        majorFieldRange = res;
       });
     }
   }
