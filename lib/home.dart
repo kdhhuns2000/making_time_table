@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
       home: Scaffold(
         body: _widgetList[_selectedIndex], // 위젯 여러개 넣을 자리
         bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
+          items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.schedule),
               label: '시간표',
@@ -53,7 +53,33 @@ class _HomeState extends State<Home> {
               label: '홈',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
+              icon: Stack(
+                children: <Widget>[
+                  Icon(Icons.notifications),
+                  Positioned(
+                    right: 0,
+                    child: Container(
+                      padding: EdgeInsets.all(1),
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      constraints: BoxConstraints(
+                        minWidth: 12,
+                        minHeight: 12,
+                      ),
+                      child: Text(
+                        '3',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 8,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  )
+                ],
+              ),
               label: '장바구니',
             ),
           ],
