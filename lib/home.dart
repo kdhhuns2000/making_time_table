@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'search.dart';
+import 'cart.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,12 +22,7 @@ class _HomeState extends State<Home> {
       ),
     ),
     Search(),
-    Center(
-      child: Text(
-        '준비중',
-        style: optionStyle,
-      ),
-    ),
+    Cart(),
   ];
 
   void _onItemTapped(int index) {
