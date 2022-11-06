@@ -1,20 +1,21 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'cart.dart';
 
 List<bool?> _isChecked = List.filled(100, false);
 
 class SubjectTile extends StatefulWidget {
+  final String majorFieldRange; // 전공/영역 매칭
   final String? searchText; // 검색어 매칭
-  const SubjectTile({Key? key, this.searchText}) : super(key: key);
+  const SubjectTile({Key? key, this.searchText, required this.majorFieldRange}) : super(key: key);
   @override
   State<SubjectTile> createState() => _SubjectTileState();
 }
 
 class _SubjectTileState extends State<SubjectTile> {
   Future<dynamic> _fetch() async {
-    String jsonString = await rootBundle.loadString('assets/json/IT융합대학.json');
+    String jsonString = await rootBundle.loadString('assets/json/${widget.majorFieldRange}.json');
     var map = jsonDecode(jsonString);
     return map;
   }
@@ -27,7 +28,14 @@ class _SubjectTileState extends State<SubjectTile> {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         //해당 부분은 data를 아직 받아 오지 못했을 때 실행되는 부분
         if (snapshot.hasData == false) {
-          return CircularProgressIndicator();
+          return Center(
+            child: Text(
+              '전공/영역을 선택해주세요',
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
+          );
         }
 
         //error가 발생하게 될 경우 반환하게 되는 부분
@@ -77,6 +85,12 @@ class _SubjectTileState extends State<SubjectTile> {
                 ),
                 value: _isChecked[index],
                 onChanged: (bool? value) {
+                  if (value == true) {
+                    cartList.add(subjectData);
+                  } else if (value == false) {
+                    cartList.removeWhere((element) => element['id'] == subjectData['id']);
+                  }
+                  print(cartList);
                   setState(() {
                     _isChecked[index] = value;
                   });

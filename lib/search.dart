@@ -78,6 +78,7 @@ class _SearchState extends State<Search> {
           ),
           Expanded(
             child: SubjectTile(
+              majorFieldRange: majorFieldRange,
               searchText: _textController.text,
             ),
           ),
