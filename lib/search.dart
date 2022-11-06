@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'constants.dart';
 import 'subject_tile.dart';
 import 'major_field.dart';
 import 'package:anim_search_bar/anim_search_bar.dart';
+
+String majorFieldRange = '선택';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -12,7 +15,6 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  String majorFieldRange = '선택';
   final TextEditingController _textController = TextEditingController();
 
   @override
@@ -39,13 +41,13 @@ class _SearchState extends State<Search> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               ClipRRect(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(kClipRRectBorderRadius),
                 child: TextButton(
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.black,
                     backgroundColor: Colors.black12,
                     padding: const EdgeInsets.all(16.0),
-                    textStyle: const TextStyle(fontSize: 20),
+                    textStyle: const TextStyle(fontSize: kClipRRectFontSize),
                   ),
                   onPressed: _onPressed,
                   child: Text.rich(
@@ -53,11 +55,10 @@ class _SearchState extends State<Search> {
                       children: <TextSpan>[
                         const TextSpan(
                           text: '전공/영역: ',
-                          style: TextStyle(fontSize: 20),
                         ),
                         TextSpan(
                           text: majorFieldRange,
-                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),

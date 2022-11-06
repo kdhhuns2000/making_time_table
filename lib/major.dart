@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'major_leaf.dart';
+import 'constants.dart';
 
 final major_map = [
   {
@@ -130,7 +131,7 @@ class MajorList extends StatelessWidget {
                     child: Center(
                       child: Text(
                         major_map[index].keys.single,
-                        style: TextStyle(fontSize: 25.0, color: Colors.black),
+                        style: TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
                       ),
                     ),
                   ),

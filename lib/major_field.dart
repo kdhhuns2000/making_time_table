@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'major.dart';
+import 'constants.dart';
 
 final major_field_list = ['전공', '교양'];
 
@@ -66,7 +67,7 @@ class MajorFieldList extends StatelessWidget {
                     child: Center(
                       child: Text(
                         major_field_list[index],
-                        style: const TextStyle(fontSize: 25.0, color: Colors.black),
+                        style: const TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
                       ),
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class MajorLeafList extends StatelessWidget {
   final String title;
@@ -50,7 +51,7 @@ class MajorLeafList extends StatelessWidget {
               child: Center(
                 child: Text(
                   major[index],
-                  style: const TextStyle(fontSize: 25.0, color: Colors.black),
+                  style: const TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
                 ),
               ),
             );
