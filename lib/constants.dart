@@ -4,3 +4,7 @@ const double kFilterListFontSize = 20.0;
 const double kClipRRectFontSize = 15.0;
 // ClipRRect border radius
 const double kClipRRectBorderRadius = 30.0;
+// Table 월, 화, 수, 목, 금 칸의 높이
+const double kTableFirstColumnHeight = 20.0;
+// Table 시간 단위 셀의 높이
+const double kBoxSize = 52.0;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'search.dart';
 import 'cart.dart';
+import 'table.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,15 +13,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 1;
   String data = ' ';
-
-  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  
   static List<Widget> _widgetList = <Widget>[
-    Center(
-      child: Text(
-        '준비중',
-        style: optionStyle,
-      ),
-    ),
+    TableWidget(),
     Search(),
     Cart(),
   ];
