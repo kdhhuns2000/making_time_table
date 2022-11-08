@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'table.dart';
 import 'constants.dart';
 
 List<dynamic> cartList = [];
@@ -14,7 +16,7 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     if (cartList.isEmpty) {
-      return Center(
+      return const Center(
         child: Text(
           '장바구니가 비어있습니다.',
           style: TextStyle(
@@ -72,7 +74,17 @@ class _CartState extends State<Cart> {
                   fixedSize: const Size(double.maxFinite, double.infinity),
                   textStyle: const TextStyle(fontSize: kClipRRectFontSize),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      child: TableWidget(
+                        cartList: cartList,
+                      ),
+                      type: PageTransitionType.fade,
+                    ),
+                  );
+                },
                 child: const Padding(
                   padding: EdgeInsets.all(10.0),
                   child: Text('시간표 조합'),
