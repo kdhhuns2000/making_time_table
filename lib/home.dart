@@ -3,6 +3,8 @@ import 'search.dart';
 import 'cart.dart';
 import 'table.dart';
 
+ValueNotifier<int> selectedIndex = ValueNotifier<int>(1);
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -11,27 +13,31 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 1;
-  String data = ' ';
-  
   static List<Widget> _widgetList = <Widget>[
     TableWidget(),
     Search(),
     Cart(),
   ];
 
+  @override
+  void initState() {
+    super.initState();
+    selectedIndex.addListener(() {
+      setState(() {});
+    });
+  }
+
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      selectedIndex.value = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    print(data);
     return MaterialApp(
       home: Scaffold(
-        body: _widgetList[_selectedIndex], // 위젯 여러개 넣을 자리
+        body: _widgetList[selectedIndex.value], // 위젯 여러개 넣을 자리
         bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -73,7 +79,7 @@ class _HomeState extends State<Home> {
               label: '장바구니',
             ),
           ],
-          currentIndex: _selectedIndex,
+          currentIndex: selectedIndex.value,
           selectedItemColor: Colors.amber[800],
           onTap: _onItemTapped,
         ),

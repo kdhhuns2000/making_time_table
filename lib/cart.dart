@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'table.dart';
 import 'constants.dart';
+import 'home.dart';
 
 List<dynamic> cartList = [];
 
@@ -75,15 +74,9 @@ class _CartState extends State<Cart> {
                   textStyle: const TextStyle(fontSize: kClipRRectFontSize),
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child: TableWidget(
-                        cartList: cartList,
-                      ),
-                      type: PageTransitionType.fade,
-                    ),
-                  );
+                  setState(() {
+                    selectedIndex.value = 0;
+                  });
                 },
                 child: const Padding(
                   padding: EdgeInsets.all(10.0),
