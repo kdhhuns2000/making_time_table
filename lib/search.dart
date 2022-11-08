@@ -76,6 +76,7 @@ class _SearchState extends State<Search> {
               });
             },
             rtl: true,
+            autoFocus: true,
           ),
           Expanded(
             child: SubjectTile(
