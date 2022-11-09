@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
+import 'algorithm.dart';
 
 List week = ['월', '화', '수', '목', '금'];
 var kColumnLength = 22;
@@ -17,7 +18,6 @@ class TableWidget extends StatefulWidget {
 }
 
 class _TableWidgetState extends State<TableWidget> {
-
   late int _selectedPage;
   late final PageController _pageController;
 
@@ -28,7 +28,6 @@ class _TableWidgetState extends State<TableWidget> {
       initialPage: _selectedPage = 0,
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +89,7 @@ class _TableWidgetState extends State<TableWidget> {
           ),
           ...List.generate(
             kColumnLength,
-                (index) {
+            (index) {
               if (index % 2 == 0) {
                 return const Divider(
                   color: Colors.grey,
@@ -118,19 +117,53 @@ class _TableWidgetState extends State<TableWidget> {
         flex: 4,
         child: Stack(
           children: <Widget>[
-            Positioned(
-              child: Container(
-                color: Colors.blue,
-                child: Text(
-                  '강의',
+            // test
+
+            // Positioned(
+            //   child: Container(
+            //     color: Colors.blue,
+            //     child: Text(
+            //       '강의',
+            //     ),
+            //   ),
+            //   // kTableFirstColumnHeight가 default, 시작시간만큼 kBoxSize * n
+            //   //top: kTableFirstColumnHeight + (kBoxSize * 2),
+            //   top: 306.0,
+            //   // 1 kBoxSize / 1시간
+            //   //height: kBoxSize + kBoxSize, -> 2시간
+            //   height: 65.0,
+            //   width: 100,
+            // ),
+
+            // 강의 들어갈 부분
+
+            for (int i = 0; i < subjectTable[index].length; i++)
+              Positioned(
+                top: kTableFirstColumnHeight + (kBoxSize * (int.parse(subjectTable[index][i]['start']) - 108) / 12),
+                // 1 kBoxSize / 1시간
+                //height: kBoxSize + kBoxSize, -> 2시간
+                height: kBoxSize * (int.parse(subjectTable[index][i]['end']) - int.parse(subjectTable[index][i]['start'])) / 12,
+                width: 100,
+                child: Container(
+                  color: Colors.blue,
+                  child: Text.rich(
+                    TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: subjectTable[index][i]['name'] + '\n',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: subjectTable[index][i]['place'],
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
-              // kTableFirstColumnHeight가 default, 시작시간만큼 kBoxSize * n
-              top: kTableFirstColumnHeight + (kBoxSize * 2),
-              // 1 kBoxSize / 1시간
-              height: kBoxSize + kBoxSize,
-              width: 100,
-            ),
+
             Column(
               children: <Widget>[
                 SizedBox(
@@ -141,7 +174,7 @@ class _TableWidgetState extends State<TableWidget> {
                 ),
                 ...List.generate(
                   kColumnLength,
-                      (index) {
+                  (index) {
                     if (index % 2 == 0) {
                       return const Divider(
                         color: Colors.grey,

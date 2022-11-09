@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'home.dart';
+import 'algorithm.dart';
 
 List<dynamic> cartList = [];
 
@@ -66,6 +67,7 @@ class _CartState extends State<Cart> {
                   textStyle: const TextStyle(fontSize: kClipRRectFontSize),
                 ),
                 onPressed: () {
+                  Calculate();
                   setState(() {
                     selectedIndex.value = 0;
                   });
