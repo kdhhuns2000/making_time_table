@@ -47,16 +47,8 @@ class _CartState extends State<Cart> {
                       ],
                     ),
                   ),
-                  subtitle: Text.rich(
-                    TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text:
-                              '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}',
-                        ),
-                      ],
-                    ),
-                  ),
+                  subtitle: Text(
+                      '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}'),
                 );
               },
               separatorBuilder: (BuildContext context, int index) => const Divider(thickness: 1.0),
