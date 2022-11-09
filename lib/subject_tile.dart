@@ -106,7 +106,6 @@ class _SubjectTileState extends State<SubjectTile> {
                             _showToast('이미 담은 과목입니다');
                           } else {
                             cartList.add(subjectData);
-                            _showToast('장바구니에 추가되었습니다');
                           }
                         },
                         child: const Text('담기'),
