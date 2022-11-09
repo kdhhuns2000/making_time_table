@@ -73,16 +73,8 @@ class _SubjectTileState extends State<SubjectTile> {
                     ],
                   ),
                 ),
-                subtitle: Text.rich(
-                  TextSpan(
-                    children: <TextSpan>[
-                      TextSpan(
-                        text:
-                            '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}',
-                      ),
-                    ],
-                  ),
-                ),
+                subtitle: Text(
+                    '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}'),
                 value: _isChecked[index],
                 onChanged: (bool? value) {
                   if (value == true) {
