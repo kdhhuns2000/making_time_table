@@ -32,24 +32,49 @@ class _CartState extends State<Cart> {
               itemCount: cartList.length,
               itemBuilder: (BuildContext context, int index) {
                 var subjectData = cartList[index];
-                return ListTile(
-                  title: Text.rich(
-                    TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: '${subjectData['name'].toString()}\n',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
+                return Row(
+                  children: [
+                    Expanded(
+                      child: ListTile(
+                        title: Text.rich(
+                          TextSpan(
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: '${subjectData['name'].toString()}\n',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              TextSpan(
+                                text: '${subjectData['professor'].toString()}\n',
+                              )
+                            ],
                           ),
                         ),
-                        TextSpan(
-                          text: '${subjectData['professor'].toString()}\n',
-                        )
-                      ],
+                        subtitle: Text(
+                            '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}'),
+                      ),
                     ),
-                  ),
-                  subtitle: Text(
-                      '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}'),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0),
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.black,
+                            backgroundColor: Colors.black12,
+                            textStyle: const TextStyle(fontSize: kClipRRectFontSize),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              cartList.removeWhere((element) => element['id'] == subjectData['id']);
+                            });
+                          },
+                          child: const Text('취소'),
+                        ),
+                      ),
+                    ),
+                  ],
                 );
               },
               separatorBuilder: (BuildContext context, int index) => const Divider(thickness: 1.0),
