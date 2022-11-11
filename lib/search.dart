@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'constants.dart';
+import 'dept.dart';
 import 'subject_tile.dart';
-import 'major_field.dart';
 import 'package:anim_search_bar/anim_search_bar.dart';
 
 String majorFieldRange = '선택';
@@ -93,7 +93,7 @@ class _SearchState extends State<Search> {
     final res = await Navigator.push(
       context,
       PageTransition(
-        child: const MajorFieldList(),
+        child: const DeptList(),
         type: PageTransitionType.bottomToTop,
       ),
     );
