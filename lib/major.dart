@@ -3,47 +3,8 @@ import 'package:page_transition/page_transition.dart';
 import 'major_leaf.dart';
 import 'constants.dart';
 
-final major_map = [
+final majorMap = [
   {
-// {
-//   '전공': [
-//     '가천리버럴아츠칼리지',
-//     '경영대학',
-//     '사회과학대학',
-//     '인문대학',
-//     '법과대학',
-//     '공과대학',
-//     '바이오나노대학',
-//     'IT융합대학',
-//     '한의과대학',
-//     '예술·체육대학',
-//     '미래산업대학',
-//     'IT대학',
-//     '예술대학',
-//     'LINC+',
-//     '아시아문화연구소',
-//     '융합전공',
-//     '글로벌교양대학',
-//     '생활과학대학',
-//     '경상대학',
-//     '건축대학',
-//     '자연과학대학',
-//     '의과대학',
-//     '약학대학',
-//     '간호대학',
-//     '보건과학대학',
-//     '경상학부',
-//     '생명과학부',
-//     '보건과학부',
-//     '의료공학부',
-//     '정보공학부',
-//     '체육과학부',
-//     '의료경영학부',
-//     '부처협업형',
-//     '창업대학',
-//   ]
-// },
-
     '가천리버럴아츠컬리지': [
       '한국학전공',
       '가천리버럴아츠칼리지',
@@ -51,6 +12,24 @@ final major_map = [
       '게임·영상학과(계약학과)',
       '디스플레이학과(계약학과)',
     ],
+  },
+  {
+    '경영대학': [],
+  },
+  {
+    '사회과학대학': [],
+  },
+  {
+    '인문대학': [],
+  },
+  {
+    '법과대학': [],
+  },
+  {
+    '공과대학': [],
+  },
+  {
+    '바이오나노대학': [],
   },
   {
     'IT융합대학': [
@@ -67,7 +46,85 @@ final major_map = [
       '컴퓨터공학부(스마트보안전공)',
       '전자공학부(전자공학전공)',
     ],
-  }
+  },
+  {
+    '한의과대학': [],
+  },
+  {
+    '예술·체육대학': [],
+  },
+  {
+    '미래산업대학': [],
+  },
+  {
+    'IT대학': [],
+  },
+  {
+    '예술대학': [],
+  },
+  {
+    'LINC+': [],
+  },
+  {
+    '아시아문화연구소': [],
+  },
+  {
+    '융합전공': [],
+  },
+  {
+    '글로벌교양대학': [],
+  },
+  {
+    '생활과학대학': [],
+  },
+  {
+    '경상대학': [],
+  },
+  {
+    '건축대학': [],
+  },
+  {
+    '자연과학대학': [],
+  },
+  {
+    '의과대학': [],
+  },
+  {
+    '약학대학': [],
+  },
+  {
+    '간호대학': [],
+  },
+  {
+    '보건과학대학': [],
+  },
+  {
+    '경상학부': [],
+  },
+  {
+    '생명과학부': [],
+  },
+  {
+    '보건과학부': [],
+  },
+  {
+    '의료공학부': [],
+  },
+  {
+    '정보공학부': [],
+  },
+  {
+    '체육과학부': [],
+  },
+  {
+    '의료경영학부': [],
+  },
+  {
+    '부처협업형': [],
+  },
+  {
+    '창업대학': [],
+  },
 ];
 
 class MajorList extends StatelessWidget {
@@ -101,46 +158,46 @@ class MajorList extends StatelessWidget {
         margin: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.0),
-          //border: Border.all(width: 0.7),
         ),
         child: ListView.separated(
-          itemCount: 2,
+          itemCount: majorMap.length,
           itemBuilder: (BuildContext context, int index) {
             return TextButton(
               onPressed: () async {
-                print(major_map[index].values.elementAt(0));
-                final major_leaf_res = await Navigator.push(
+                final majorLeafRes = await Navigator.push(
                   context,
                   PageTransition(
                       child: MajorLeafList(
-                        title: major_map[index].keys.single,
-                        major: major_map[index].values.elementAt(0),
+                        title: majorMap[index].keys.single,
+                        major: majorMap[index].values.elementAt(0),
                       ),
                       type: PageTransitionType.rightToLeft),
                 );
-                print('major.dart res $major_leaf_res');
-                Navigator.pop(context, major_leaf_res);
+                Navigator.pop(context, majorLeafRes);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 50.0,
                   ),
                   Expanded(
                     child: Center(
                       child: Text(
-                        major_map[index].keys.single,
-                        style: TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
+                        majorMap[index].keys.single,
+                        style: const TextStyle(
+                          fontSize: kFilterListFontSize,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
+                    width: 50.0,
                     child: Icon(
                       Icons.arrow_forward,
                       color: Colors.black,
                     ),
-                    width: 50.0,
                   )
                 ],
               ),
