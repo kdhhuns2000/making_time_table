@@ -5,7 +5,7 @@ import 'dept.dart';
 import 'subject_tile.dart';
 import 'package:anim_search_bar/anim_search_bar.dart';
 
-String majorFieldRange = '선택';
+String deptRange = '선택';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -57,7 +57,7 @@ class _SearchState extends State<Search> {
                           text: '전공/영역: ',
                         ),
                         TextSpan(
-                          text: majorFieldRange,
+                          text: deptRange,
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ],
@@ -80,7 +80,7 @@ class _SearchState extends State<Search> {
           ),
           Expanded(
             child: SubjectTile(
-              majorFieldRange: majorFieldRange,
+              dept: deptRange,
               searchText: _textController.text,
             ),
           ),
@@ -99,7 +99,7 @@ class _SearchState extends State<Search> {
     );
     if (res != null) {
       setState(() {
-        majorFieldRange = res;
+        deptRange = res;
       });
     }
   }

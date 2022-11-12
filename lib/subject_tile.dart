@@ -6,9 +6,9 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class SubjectTile extends StatefulWidget {
-  final String majorFieldRange; // 전공/영역 매칭
+  final String dept; // 전공/영역 매칭
   final String? searchText; // 검색어 매칭
-  const SubjectTile({Key? key, this.searchText, required this.majorFieldRange}) : super(key: key);
+  const SubjectTile({Key? key, this.searchText, required this.dept}) : super(key: key);
 
   @override
   State<SubjectTile> createState() => _SubjectTileState();
@@ -16,7 +16,7 @@ class SubjectTile extends StatefulWidget {
 
 class _SubjectTileState extends State<SubjectTile> {
   Future<dynamic> _fetch() async {
-    String jsonString = await rootBundle.loadString('assets/json/${widget.majorFieldRange}.json');
+    String jsonString = await rootBundle.loadString('assets/json/${widget.dept}.json');
     var map = jsonDecode(jsonString);
     return map;
   }
@@ -62,11 +62,11 @@ class _SubjectTileState extends State<SubjectTile> {
         // 데이터를 정상적으로 받아오게 되면 다음 부분을 실행하게 되는 부분
         else {
           // searchText의 내용이 있는 데이터를 제거
-          snapshot.data[0]['subject'].removeWhere((data) => !data['name'].toString().contains(searchText!));
+          snapshot.data.removeWhere((data) => !data['name'].toString().contains(searchText!));
           return ListView.separated(
-            itemCount: snapshot.data[0]['subject'].length,
+            itemCount: snapshot.data.length,
             itemBuilder: (BuildContext context, int index) {
-              var subjectData = snapshot.data[0]['subject'][index];
+              var subjectData = snapshot.data[index];
 
               return Row(
                 children: [
