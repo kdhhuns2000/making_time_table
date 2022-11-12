@@ -1,0 +1,260 @@
+[
+  {
+    "id": "5602648",
+    "code": "13773001",
+    "name": "안전 및 조직 관리사례연구",
+    "professor": "정재훈",
+    "type": "군사",
+    "time": "화7 ,화8 ,목7 ,목8",
+    "place": "학생회관-100",
+    "credit": "2",
+    "capacity": "60",
+    "popular": "13",
+    "target": "",
+    "notice": "가천리버럴아츠칼리지3",
+    "lectureId": "2332504",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": [
+      {
+        "day": "1",
+        "start": "180",
+        "end": "204",
+        "place": "학생회관-100"
+      },
+      {
+        "day": "3",
+        "start": "180",
+        "end": "204",
+        "place": "학생회관-100"
+      }
+    ]
+  },
+  {
+    "id": "5602649",
+    "code": "13774001",
+    "name": "조직리더십 사례연구",
+    "professor": "김성준",
+    "type": "군사",
+    "time": "화7 ,화8 ,목7 ,목8",
+    "place": "학생회관-309B",
+    "credit": "2",
+    "capacity": "60",
+    "popular": "13",
+    "target": "",
+    "notice": "가천리버럴아츠칼리지4",
+    "lectureId": "2455464",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": [
+      {
+        "day": "1",
+        "start": "180",
+        "end": "204",
+        "place": "학생회관-309B"
+      },
+      {
+        "day": "3",
+        "start": "180",
+        "end": "204",
+        "place": "학생회관-309B"
+      }
+    ]
+  },
+  {
+    "id": "5604336",
+    "code": "M3256001",
+    "name": "안전및조직관리사례연구",
+    "professor": "정재훈",
+    "type": "군사",
+    "time": "목7 ,목8 ,목9 ,목10",
+    "place": "(M)간호대학-301",
+    "credit": "2",
+    "capacity": "10",
+    "popular": "3",
+    "target": "",
+    "notice": "교양학과3",
+    "lectureId": "2333006",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "3",
+      "start": "180",
+      "end": "228",
+      "place": "(M)간호대학-301"
+    }
+  },
+  {
+    "id": "5604337",
+    "code": "M3257001",
+    "name": "조직리더십사례연구",
+    "professor": "김성준",
+    "type": "군사",
+    "time": "목7 ,목8 ,목9 ,목10",
+    "place": "(M)보건과학대학-317",
+    "credit": "2",
+    "capacity": "10",
+    "popular": "2",
+    "target": "",
+    "notice": "교양학과4",
+    "lectureId": "2456044",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "3",
+      "start": "180",
+      "end": "228",
+      "place": "(M)보건과학대학-317"
+    }
+  },
+  {
+    "id": "5668640",
+    "code": "13774002",
+    "name": "조직리더십 사례연구",
+    "professor": "김성준",
+    "type": "군사",
+    "time": "화9 ,화10 ,목9 ,목10",
+    "place": "학생회관-309B",
+    "credit": "2",
+    "capacity": "60",
+    "popular": "2",
+    "target": "",
+    "notice": "가천리버럴아츠칼리지4",
+    "lectureId": "2455464",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": [
+      {
+        "day": "1",
+        "start": "204",
+        "end": "228",
+        "place": "학생회관-309B"
+      },
+      {
+        "day": "3",
+        "start": "204",
+        "end": "228",
+        "place": "학생회관-309B"
+      }
+    ]
+  },
+  {
+    "id": "5788729",
+    "code": "77787001",
+    "name": "임베디드 시스템 설계 (팹리스)(부처협업형)",
+    "professor": "김태경",
+    "type": "일선",
+    "time": "월5 ,월6 ,월7 ,월8",
+    "place": "비전타워-206",
+    "credit": "3",
+    "capacity": "30",
+    "popular": "4",
+    "target": "",
+    "notice": "전기4/전자공학과/전자공학과4/전자공학과야/전자공학부(전자공학전공)/전자공학전공/컴퓨터공학과4/화공생명4",
+    "lectureId": "2456233",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "0",
+      "start": "156",
+      "end": "204",
+      "place": "비전타워-206"
+    }
+  },
+  {
+    "id": "5823910",
+    "code": "77786006",
+    "name": "디지털 시스템 설계 및 CAD 실습 (팹리스)(부처협업형)",
+    "professor": "서민재",
+    "type": "일선",
+    "time": "목1 ,목2 ,목3 ,목4",
+    "place": "비전타워-206",
+    "credit": "3",
+    "capacity": "30",
+    "popular": "18",
+    "target": "",
+    "notice": "전기4/전자공학과/전자공학과4/전자공학과야/전자공학부(전자공학전공)/전자공학전공/컴퓨터공학과4/화공생명4",
+    "lectureId": "2456235",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "3",
+      "start": "108",
+      "end": "156",
+      "place": "비전타워-206"
+    }
+  },
+  {
+    "id": "5823911",
+    "code": "77787006",
+    "name": "임베디드 시스템 설계 (팹리스)(부처협업형)",
+    "professor": "김태경",
+    "type": "일선",
+    "time": "화5 ,화6 ,화7 ,화8",
+    "place": "비전타워-206",
+    "credit": "3",
+    "capacity": "30",
+    "popular": "8",
+    "target": "",
+    "notice": "전기4/전자공학과/전자공학과4/전자공학과야/전자공학부(전자공학전공)/전자공학전공/컴퓨터공학과4/화공생명4",
+    "lectureId": "2456233",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "1",
+      "start": "156",
+      "end": "204",
+      "place": "비전타워-206"
+    }
+  },
+  {
+    "id": "5823912",
+    "code": "77788006",
+    "name": "아날로그 시스템 설계 (팹리스)(부처협업형)",
+    "professor": "김종석",
+    "type": "일선",
+    "time": "금1 ,금2 ,금3 ,금4",
+    "place": "비전타워-206",
+    "credit": "3",
+    "capacity": "30",
+    "popular": "12",
+    "target": "",
+    "notice": "전기4/전자공학과/전자공학과4/전자공학과야/전자공학부(전자공학전공)/전자공학전공/컴퓨터공학과4/화공생명4",
+    "lectureId": "2456236",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "4",
+      "start": "108",
+      "end": "156",
+      "place": "비전타워-206"
+    }
+  }
+]

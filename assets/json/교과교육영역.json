@@ -1,0 +1,114 @@
+[
+  {
+    "id": "5603316",
+    "code": "61139001",
+    "name": "국어교과교재연구 및 지도법 (12주)",
+    "professor": "김진호",
+    "type": "교직",
+    "time": "수7 ,수8 ,수9 ,금9",
+    "place": "교육대학원-102",
+    "credit": "3",
+    "capacity": "60",
+    "popular": "4",
+    "target": "",
+    "notice": "국문3",
+    "lectureId": "2332662",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": [
+      {
+        "day": "2",
+        "start": "180",
+        "end": "216",
+        "place": "교육대학원-102"
+      },
+      {
+        "day": "4",
+        "start": "204",
+        "end": "216",
+        "place": "교육대학원-102"
+      }
+    ]
+  },
+  {
+    "id": "5603317",
+    "code": "61140001",
+    "name": "외국어교과교재연구 및 지도법 (12주)",
+    "professor": "윤상현",
+    "type": "교직",
+    "time": "금5 ,금6 ,금7 ,금8",
+    "place": "가천관-419",
+    "credit": "3",
+    "capacity": "60",
+    "popular": "9",
+    "target": "",
+    "notice": "동양어3/영문3",
+    "lectureId": "2455754",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "4",
+      "start": "156",
+      "end": "204",
+      "place": "가천관-419"
+    }
+  },
+  {
+    "id": "5604350",
+    "code": "09600001",
+    "name": "유아교과교재연구 및 지도법",
+    "professor": "황환옥",
+    "type": "교직",
+    "time": "월5 ,월6 ,월7 ,월8",
+    "place": "교육대학원-513",
+    "credit": "3",
+    "capacity": "35",
+    "popular": "32",
+    "target": "",
+    "notice": "유아교육학과2",
+    "lectureId": "2456047",
+    "lectureRate": "0",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "0",
+      "start": "156",
+      "end": "204",
+      "place": "교육대학원-513"
+    }
+  },
+  {
+    "id": "5604351",
+    "code": "09600002",
+    "name": "유아교과교재연구 및 지도법",
+    "professor": "곽은순",
+    "type": "교직",
+    "time": "수1 ,수2 ,수3 ,수4",
+    "place": "교육대학원-513",
+    "credit": "3",
+    "capacity": "30",
+    "popular": "27",
+    "target": "",
+    "notice": "유아교육학과2",
+    "lectureId": "1876974",
+    "lectureRate": "3",
+    "misc1": "",
+    "misc2": "",
+    "misc3": "",
+    "misc4": "",
+    "timeplace": {
+      "day": "2",
+      "start": "108",
+      "end": "156",
+      "place": "교육대학원-513"
+    }
+  }
+]
