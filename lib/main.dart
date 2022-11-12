@@ -85,12 +85,10 @@ class _InitialPageWidgetState extends State<InitialPage> {
                         textStyle: const TextStyle(fontSize: 30.0),
                       ),
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushAndRemoveUntil(
                           context,
-                          PageTransition(
-                            child: const Home(),
-                            type: PageTransitionType.fade,
-                          ),
+                          PageTransition(child: const Home(), type: PageTransitionType.fade),
+                          (route) => false,
                         );
                       },
                       child: const Padding(
