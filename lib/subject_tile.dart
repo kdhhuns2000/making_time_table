@@ -1,3 +1,5 @@
+import 'package:time_table/home.dart';
+
 import 'cart.dart';
 import 'constants.dart';
 import 'dart:convert';
@@ -106,6 +108,7 @@ class _SubjectTileState extends State<SubjectTile> {
                             _showToast('이미 담은 과목입니다');
                           } else {
                             cartList.add(subjectData);
+                            cartLength.value = cartList.length;
                           }
                         },
                         child: const Text('담기'),

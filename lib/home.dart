@@ -4,6 +4,7 @@ import 'cart.dart';
 import 'table.dart';
 
 ValueNotifier<int> selectedIndex = ValueNotifier<int>(1);
+ValueNotifier<int> cartLength = ValueNotifier<int>(0);
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -25,12 +26,19 @@ class _HomeState extends State<Home> {
     selectedIndex.addListener(() {
       setState(() {});
     });
+    cartLength.addListener(() {
+      setState(() {});
+    });
   }
 
   void _onItemTapped(int index) {
     setState(() {
       selectedIndex.value = index;
     });
+  }
+
+  bool _visibility() {
+    return cartLength.value != 0 ? true : false;
   }
 
   @override
@@ -52,25 +60,28 @@ class _HomeState extends State<Home> {
               icon: Stack(
                 children: <Widget>[
                   Icon(Icons.notifications),
-                  Positioned(
-                    right: 0,
-                    child: Container(
-                      padding: EdgeInsets.all(1),
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      constraints: BoxConstraints(
-                        minWidth: 12,
-                        minHeight: 12,
-                      ),
-                      child: Text(
-                        '3',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 8,
+                  Visibility(
+                    visible: _visibility(),
+                    child: Positioned(
+                      right: 0,
+                      child: Container(
+                        padding: EdgeInsets.all(1),
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(6),
                         ),
-                        textAlign: TextAlign.center,
+                        constraints: BoxConstraints(
+                          minWidth: 12,
+                          minHeight: 12,
+                        ),
+                        child: Text(
+                          cartList.length.toString(),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 8,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                   )

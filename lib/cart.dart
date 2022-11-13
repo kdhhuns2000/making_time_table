@@ -4,6 +4,7 @@ import 'home.dart';
 import 'algorithm.dart';
 
 List<dynamic> cartList = [];
+//ValueNotifier<List<dynamic>> cartListListener = ValueNotifier<List<dynamic>>([]);
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
+
   @override
   Widget build(BuildContext context) {
     if (cartList.isEmpty) {
@@ -69,6 +71,7 @@ class _CartState extends State<Cart> {
                             setState(() {
                               cartList.removeWhere((element) => element['id'] == subjectData['id']);
                             });
+                            cartLength.value = cartList.length;
                           },
                           child: const Text('취소'),
                         ),
