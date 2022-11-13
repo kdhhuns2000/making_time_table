@@ -1,6 +1,6 @@
+import 'cart.dart';
 import 'package:flutter/material.dart';
 import 'search.dart';
-import 'cart.dart';
 import 'table.dart';
 
 ValueNotifier<int> selectedIndex = ValueNotifier<int>(1);
@@ -44,55 +44,57 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: _widgetList[selectedIndex.value], // 위젯 여러개 넣을 자리
-        bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.schedule),
-              label: '시간표',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: '홈',
-            ),
-            BottomNavigationBarItem(
-              icon: Stack(
-                children: <Widget>[
-                  Icon(Icons.notifications),
-                  Visibility(
-                    visible: _visibility(),
-                    child: Positioned(
-                      right: 0,
-                      child: Container(
-                        padding: EdgeInsets.all(1),
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        constraints: BoxConstraints(
-                          minWidth: 12,
-                          minHeight: 12,
-                        ),
-                        child: Text(
-                          cartList.length.toString(),
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 8,
+      home: SafeArea(
+        child: Scaffold(
+          body: _widgetList[selectedIndex.value], // 위젯 여러개 넣을 자리
+          bottomNavigationBar: BottomNavigationBar(
+            items: <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.schedule),
+                label: '시간표',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: '홈',
+              ),
+              BottomNavigationBarItem(
+                icon: Stack(
+                  children: <Widget>[
+                    Icon(Icons.notifications),
+                    Visibility(
+                      visible: _visibility(),
+                      child: Positioned(
+                        right: 0,
+                        child: Container(
+                          padding: EdgeInsets.all(1),
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(6),
                           ),
-                          textAlign: TextAlign.center,
+                          constraints: BoxConstraints(
+                            minWidth: 12,
+                            minHeight: 12,
+                          ),
+                          child: Text(
+                            cartList.length.toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 8,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
+                label: '장바구니',
               ),
-              label: '장바구니',
-            ),
-          ],
-          currentIndex: selectedIndex.value,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
+            ],
+            currentIndex: selectedIndex.value,
+            selectedItemColor: Colors.amber[800],
+            onTap: _onItemTapped,
+          ),
         ),
       ),
     );
