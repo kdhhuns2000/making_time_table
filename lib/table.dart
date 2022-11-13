@@ -7,11 +7,11 @@ List week = ['월', '화', '수', '목', '금'];
 var kColumnLength = 22;
 
 class TableWidget extends StatefulWidget {
-  TableWidget({
+  const TableWidget({
     Key? key,
     this.cartList,
   }) : super(key: key);
-  List<dynamic>? cartList;
+  final List<dynamic>? cartList;
 
   @override
   State<TableWidget> createState() => _TableWidgetState();
@@ -38,20 +38,36 @@ class _TableWidgetState extends State<TableWidget> {
             controller: _pageController,
             itemCount: 3,
             itemBuilder: (BuildContext context, int index) {
-              return Center(
-                child: Container(
-                  height: kColumnLength / 2 * kBoxSize + kColumnLength,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(12),
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      '시간표 ${index+1}',
+                      style: const TextStyle(
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                  child: Row(
-                    children: [
-                      buildTimeColumn(),
-                      for (int i = 0; i < 5; i++) ...buildDayColumn(i),
-                    ],
+                  Center(
+                    child: Container(
+                      height: kColumnLength / 2 * kBoxSize + kColumnLength,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Row(
+                        children: [
+                          buildTimeColumn(),
+                          for (int i = 0; i < 5; i++) ...buildDayColumn(i),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                ],
               );
             },
             onPageChanged: (int index) {
@@ -84,7 +100,7 @@ class _TableWidgetState extends State<TableWidget> {
     return Expanded(
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: kTableFirstColumnHeight,
           ),
           ...List.generate(
@@ -142,7 +158,9 @@ class _TableWidgetState extends State<TableWidget> {
                 top: kTableFirstColumnHeight + (kBoxSize * (int.parse(subjectTable[index][i]['start']) - 108) / 12),
                 // 1 kBoxSize / 1시간
                 //height: kBoxSize + kBoxSize, -> 2시간
-                height: kBoxSize * (int.parse(subjectTable[index][i]['end']) - int.parse(subjectTable[index][i]['start'])) / 12,
+                height: kBoxSize *
+                    (int.parse(subjectTable[index][i]['end']) - int.parse(subjectTable[index][i]['start'])) /
+                    12,
                 width: 100,
                 child: Container(
                   color: Colors.blue,
