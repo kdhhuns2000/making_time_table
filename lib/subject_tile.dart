@@ -109,6 +109,11 @@ class _SubjectTileState extends State<SubjectTile> {
                           } else {
                             cartList.add(subjectData);
                             cartLength.value = cartList.length;
+                            const snackBar = SnackBar(
+                              content: Text('장바구니에 담았습니다.',),
+                              duration: Duration(seconds: 1),
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           }
                         },
                         child: const Text('담기'),
@@ -176,4 +181,6 @@ class _SubjectTileState extends State<SubjectTile> {
       toastDuration: const Duration(seconds: 2),
     );
   }
+
+
 }

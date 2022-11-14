@@ -4,7 +4,6 @@ import 'home.dart';
 import 'algorithm.dart';
 
 List<dynamic> cartList = [];
-//ValueNotifier<List<dynamic>> cartListListener = ValueNotifier<List<dynamic>>([]);
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
@@ -72,6 +71,11 @@ class _CartState extends State<Cart> {
                               cartList.removeWhere((element) => element['id'] == subjectData['id']);
                             });
                             cartLength.value = cartList.length;
+                            const snackBar = SnackBar(
+                              content: Text('장바구니에서 과목을 지웠습니다.',),
+                              duration: Duration(seconds: 1),
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           },
                           child: const Text('취소'),
                         ),
