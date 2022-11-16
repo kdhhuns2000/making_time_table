@@ -45,7 +45,7 @@ class _TableWidgetState extends State<TableWidget> {
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Text(
-                      '시간표 ${index+1}',
+                      '시간표 ${index + 1}',
                       style: const TextStyle(
                         fontSize: 30.0,
                         fontWeight: FontWeight.bold,
@@ -133,6 +133,31 @@ class _TableWidgetState extends State<TableWidget> {
         flex: 4,
         child: Stack(
           children: <Widget>[
+            Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 20,
+                  child: Text(
+                    '${week[index]}',
+                  ),
+                ),
+                ...List.generate(
+                  kColumnLength,
+                  (index) {
+                    if (index % 2 == 0) {
+                      return const Divider(
+                        color: Colors.grey,
+                        height: 0,
+                      );
+                    }
+                    return SizedBox(
+                      height: kBoxSize,
+                      child: Container(),
+                    );
+                  },
+                ),
+              ],
+            ),
             // test
 
             // Positioned(
@@ -158,12 +183,10 @@ class _TableWidgetState extends State<TableWidget> {
                 top: kTableFirstColumnHeight + (kBoxSize * (int.parse(subjectTable[index][i]['start']) - 108) / 12),
                 // 1 kBoxSize / 1시간
                 //height: kBoxSize + kBoxSize, -> 2시간
-                height: kBoxSize *
-                    (int.parse(subjectTable[index][i]['end']) - int.parse(subjectTable[index][i]['start'])) /
-                    12,
+                height: kBoxSize * (int.parse(subjectTable[index][i]['end']) - int.parse(subjectTable[index][i]['start'])) / 12,
                 width: 100,
                 child: Container(
-                  color: Colors.blue,
+                  color: subjectTable[index][i]['color'],
                   child: Text.rich(
                     TextSpan(
                       children: <TextSpan>[
@@ -181,32 +204,6 @@ class _TableWidgetState extends State<TableWidget> {
                   ),
                 ),
               ),
-
-            Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 20,
-                  child: Text(
-                    '${week[index]}',
-                  ),
-                ),
-                ...List.generate(
-                  kColumnLength,
-                  (index) {
-                    if (index % 2 == 0) {
-                      return const Divider(
-                        color: Colors.grey,
-                        height: 0,
-                      );
-                    }
-                    return SizedBox(
-                      height: kBoxSize,
-                      child: Container(),
-                    );
-                  },
-                ),
-              ],
-            )
           ],
         ),
       ),
