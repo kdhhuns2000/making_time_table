@@ -134,6 +134,13 @@ class MajorList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () => Navigator.of(context).pop("previous"),
+        ),
         actions: [
           IconButton(
             icon: const Icon(
@@ -173,7 +180,8 @@ class MajorList extends StatelessWidget {
                       ),
                       type: PageTransitionType.rightToLeft),
                 );
-                Navigator.pop(context, majorLeafRes);
+                if (majorLeafRes != "previous")
+                  Navigator.pop(context, majorLeafRes);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

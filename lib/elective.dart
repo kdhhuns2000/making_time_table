@@ -31,6 +31,13 @@ class ElectiveList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () => Navigator.of(context).pop("previous"),
+        ),
         actions: [
           IconButton(
             icon: const Icon(
@@ -63,7 +70,6 @@ class ElectiveList extends StatelessWidget {
             return TextButton(
               onPressed: () {
                 Navigator.pop(context, electiveMap[index]);
-                //Navigator.popUntil(context, (route) => route.isFirst);
               },
               child: Center(
                 child: Text(

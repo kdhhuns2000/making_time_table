@@ -52,7 +52,8 @@ class DeptList extends StatelessWidget {
                     type: PageTransitionType.rightToLeft,
                   ),
                 );
-                Navigator.pop(context, filterRes);
+                if (filterRes != "previous")
+                  Navigator.pop(context, filterRes);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
