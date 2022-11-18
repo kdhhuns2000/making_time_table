@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 final electiveMap = [
+  '교양전체',
   '교직이론영역',
   '교과교육영역',
   '교육실습영역',
