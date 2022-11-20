@@ -36,7 +36,7 @@ class _TableWidgetState extends State<TableWidget> {
         Expanded(
           child: PageView.builder(
             controller: _pageController,
-            itemCount: 3,
+            itemCount: pageList.length,
             itemBuilder: (BuildContext context, int index) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +62,7 @@ class _TableWidgetState extends State<TableWidget> {
                       child: Row(
                         children: [
                           buildTimeColumn(),
-                          for (int i = 0; i < 5; i++) ...buildDayColumn(i),
+                          for (int i = 0; i < 5; i++) ...buildDayColumn(index, i),
                         ],
                       ),
                     ),
@@ -81,7 +81,7 @@ class _TableWidgetState extends State<TableWidget> {
           padding: const EdgeInsets.all(32.0),
           child: PageViewDotIndicator(
             currentItem: _selectedPage,
-            count: 3,
+            count: pageList.length,
             unselectedColor: Colors.black26,
             selectedColor: Colors.blue,
             size: const Size(12, 12),
@@ -123,7 +123,7 @@ class _TableWidgetState extends State<TableWidget> {
     );
   }
 
-  List<Widget> buildDayColumn(int index) {
+  List<Widget> buildDayColumn(int page, int index) {
     return [
       const VerticalDivider(
         color: Colors.grey,
@@ -178,26 +178,26 @@ class _TableWidgetState extends State<TableWidget> {
 
             // 강의 들어갈 부분
 
-            for (int i = 0; i < subjectTable[index].length; i++)
+            for (int i = 0; i < pageList[page][index].length; i++)
               Positioned(
-                top: kTableFirstColumnHeight + (kBoxSize * (int.parse(subjectTable[index][i]['start']) - 108) / 12),
+                top: kTableFirstColumnHeight + (kBoxSize * (int.parse(pageList[page][index][i]['start']) - 108) / 12),
                 // 1 kBoxSize / 1시간
                 //height: kBoxSize + kBoxSize, -> 2시간
-                height: kBoxSize * (int.parse(subjectTable[index][i]['end']) - int.parse(subjectTable[index][i]['start'])) / 12,
+                height: kBoxSize * (int.parse(pageList[page][index][i]['end']) - int.parse(pageList[page][index][i]['start'])) / 12,
                 width: 100,
                 child: Container(
-                  color: subjectTable[index][i]['color'],
+                  color: pageList[page][index][i]['color'],
                   child: Text.rich(
                     TextSpan(
                       children: <TextSpan>[
                         TextSpan(
-                          text: subjectTable[index][i]['name'] + '\n',
+                          text: pageList[page][index][i]['name'] + '\n',
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         TextSpan(
-                          text: subjectTable[index][i]['place'],
+                          text: pageList[page][index][i]['place'],
                         )
                       ],
                     ),
