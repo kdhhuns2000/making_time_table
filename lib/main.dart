@@ -69,12 +69,12 @@ class _InitialPageWidgetState extends State<InitialPage> {
             Expanded(
               flex: 6,
               child: Align(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.center,
                 child: AnimatedContainer(
                   width: 400.0,
                   height: selected ? 100.0 : 300.0,
                   color: Colors.transparent,
-                  alignment: selected ? Alignment.bottomCenter : AlignmentDirectional.center,
+                  alignment: selected ? Alignment.center : AlignmentDirectional.center,
                   duration: Duration(milliseconds: _animationDuration),
                   curve: Curves.fastOutSlowIn,
                   child: Image(
@@ -104,11 +104,17 @@ class _InitialPageWidgetState extends State<InitialPage> {
                             textStyle: const TextStyle(fontSize: 30.0),
                           ),
                           onPressed: () {
-                            Navigator.pushAndRemoveUntil(
-                              context,
-                              PageTransition(child: const Home(), type: PageTransitionType.fade),
-                              (route) => false,
-                            );
+                            setState(() {
+                              selected = !selected;
+                              _opacity = 0.0;
+                            });
+                            Future.delayed(Duration(milliseconds: _animationDuration), () {
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                PageTransition(child: const Home(), type: PageTransitionType.fade),
+                                (route) => false,
+                              );
+                            });
                           },
                           child: const Padding(
                             padding: EdgeInsets.all(10.0),

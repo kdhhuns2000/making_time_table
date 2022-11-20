@@ -81,7 +81,7 @@ class _TableWidgetState extends State<TableWidget> {
           padding: const EdgeInsets.all(32.0),
           child: PageViewDotIndicator(
             currentItem: _selectedPage,
-            count: pageList.length,
+            count: pageList.length != 0 ? pageList.length : 1,
             unselectedColor: Colors.black26,
             selectedColor: kDefaultAppColor,
             size: const Size(12, 12),
