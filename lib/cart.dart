@@ -76,7 +76,7 @@ class _CartState extends State<Cart> {
                             setState(() {
                               cartList.removeWhere((element) => element['id'] == subjectData['id']);
                             });
-                            cartLength.value = cartList.length;
+                            //cartLength.value = cartList.length;
                             const snackBar = SnackBar(
                               content: Text(
                                 '장바구니에서 과목을 지웠습니다.',
@@ -101,7 +101,7 @@ class _CartState extends State<Cart> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(kClipRRectBorderRadius),
               child: ElevatedButton(

@@ -52,19 +52,17 @@ class _TableWidgetState extends State<TableWidget> {
                       ),
                     ),
                   ),
-                  Center(
-                    child: Container(
-                      height: kColumnLength / 2 * kBoxSize + kColumnLength,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Row(
-                        children: [
-                          buildTimeColumn(),
-                          for (int i = 0; i < 5; i++) ...buildDayColumn(index, i),
-                        ],
-                      ),
+                  Container(
+                    height: kColumnLength / 2 * kBoxSize + kColumnLength,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      children: [
+                        buildTimeColumn(),
+                        for (int i = 0; i < 5; i++) ...buildDayColumn(index, i),
+                      ],
                     ),
                   ),
                 ],
@@ -78,7 +76,7 @@ class _TableWidgetState extends State<TableWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: const EdgeInsets.all(16.0),
           child: PageViewDotIndicator(
             currentItem: _selectedPage,
             count: pageList.length != 0 ? pageList.length : 1,
