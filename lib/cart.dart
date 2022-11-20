@@ -53,7 +53,7 @@ class _CartState extends State<Cart> {
                           ),
                         ),
                         subtitle: Text(
-                            '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['id']}'),
+                            '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}'),
                       ),
                     ),
                     Padding(
