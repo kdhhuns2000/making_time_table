@@ -154,7 +154,7 @@ class MajorList extends StatelessWidget {
           '전공',
           style: TextStyle(
             color: Colors.black,
-            fontWeight: FontWeight.bold,
+            fontFamily: kDefaultFontBold,
           ),
         ),
         centerTitle: true,
@@ -194,6 +194,7 @@ class MajorList extends StatelessWidget {
                       child: Text(
                         majorMap[index].keys.single,
                         style: const TextStyle(
+                          fontFamily: kDefaultFont,
                           fontSize: kFilterListFontSize,
                           color: Colors.black,
                         ),

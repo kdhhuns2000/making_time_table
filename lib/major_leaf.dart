@@ -35,6 +35,7 @@ class MajorLeafList extends StatelessWidget {
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
+            fontFamily: kDefaultFontBold,
           ),
         ),
         centerTitle: true,
@@ -57,8 +58,11 @@ class MajorLeafList extends StatelessWidget {
               child: Center(
                 child: Text(
                   major[index],
-                  style: const TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
-                ),
+                  style: const TextStyle(
+                    fontFamily: kDefaultFont,
+                    fontSize: kFilterListFontSize,
+                    color: Colors.black,
+                  ),                ),
               ),
             );
           },

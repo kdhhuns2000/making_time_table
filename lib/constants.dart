@@ -1,5 +1,8 @@
 import 'dart:ui';
 
+const Color kDefaultAppColor = Color(0xFFC7576B);
+const String kDefaultFont = 'GmarketSansTTFMedium';
+const String kDefaultFontBold = 'GmarketSansTTFBold';
 // 전공 및 영역을 선택하는 list tile들의 font size
 const double kFilterListFontSize = 20.0;
 // ClipRRect 위젯의 font size

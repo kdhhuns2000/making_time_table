@@ -55,10 +55,11 @@ class _SearchState extends State<Search> {
                       children: <TextSpan>[
                         const TextSpan(
                           text: '전공/영역: ',
+                          style: const TextStyle(fontFamily: kDefaultFont),
                         ),
                         TextSpan(
                           text: deptRange,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontFamily: kDefaultFont, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),

@@ -83,7 +83,7 @@ class _TableWidgetState extends State<TableWidget> {
             currentItem: _selectedPage,
             count: pageList.length,
             unselectedColor: Colors.black26,
-            selectedColor: Colors.blue,
+            selectedColor: kDefaultAppColor,
             size: const Size(12, 12),
             unselectedSize: const Size(8, 8),
             duration: const Duration(milliseconds: 200),

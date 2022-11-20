@@ -1,3 +1,5 @@
+import 'package:time_table/constants.dart';
+
 import 'cart.dart';
 import 'package:flutter/material.dart';
 import 'search.dart';
@@ -48,6 +50,8 @@ class _HomeState extends State<Home> {
         child: Scaffold(
           body: _widgetList[selectedIndex.value], // 위젯 여러개 넣을 자리
           bottomNavigationBar: BottomNavigationBar(
+            selectedLabelStyle: TextStyle(fontFamily: kDefaultFont, fontSize: 15.0),
+            unselectedLabelStyle: TextStyle(fontFamily: kDefaultFont, fontSize: 15.0),
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(Icons.schedule),
@@ -92,7 +96,7 @@ class _HomeState extends State<Home> {
               ),
             ],
             currentIndex: selectedIndex.value,
-            selectedItemColor: Colors.amber[800],
+            selectedItemColor: kDefaultAppColor,
             onTap: _onItemTapped,
           ),
         ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:time_table/constants.dart';
 import 'home.dart';
 
 void main() {
@@ -46,63 +47,86 @@ class _InitialPageWidgetState extends State<InitialPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      //mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Expanded(
-          flex: 6,
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: AnimatedContainer(
-              width: 200.0,
-              height: selected ? 100.0 : 300.0,
-              color: Colors.transparent,
-              alignment: selected ? Alignment.bottomCenter : AlignmentDirectional.topCenter,
-              duration: Duration(milliseconds: _animationDuration),
-              curve: Curves.fastOutSlowIn,
-              child: const FlutterLogo(size: 150),
+    return SafeArea(
+      child: Container(
+        color: Colors.white,
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              flex: 4,
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                child: AnimatedOpacity(
+                  duration: Duration(milliseconds: _animationDuration),
+                  opacity: _opacity,
+                  child: Image(
+                    image: AssetImage('assets/image/title.png'),
+                  ),
+                ),
+              ),
             ),
-          ),
-        ),
-        Expanded(
-          flex: 4,
-          child: AnimatedOpacity(
-            duration: Duration(milliseconds: _animationDuration),
-            opacity: _opacity,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            Expanded(
+              flex: 6,
               child: Align(
-                alignment: Alignment.topCenter,
-                child: TextButton(
-                  onPressed: () {},
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.greenAccent,
-                        disabledBackgroundColor: Colors.grey,
-                        fixedSize: const Size(double.maxFinite, double.infinity),
-                        textStyle: const TextStyle(fontSize: 30.0),
-                      ),
-                      onPressed: () {
-                        Navigator.pushAndRemoveUntil(
-                          context,
-                          PageTransition(child: const Home(), type: PageTransitionType.fade),
-                          (route) => false,
-                        );
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('시간표 만들기'),
+                alignment: Alignment.bottomCenter,
+                child: AnimatedContainer(
+                  width: 400.0,
+                  height: selected ? 100.0 : 300.0,
+                  color: Colors.transparent,
+                  alignment: selected ? Alignment.bottomCenter : AlignmentDirectional.center,
+                  duration: Duration(milliseconds: _animationDuration),
+                  curve: Curves.fastOutSlowIn,
+                  child: Image(
+                    image: AssetImage('assets/image/logo.png'),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 4,
+              child: AnimatedOpacity(
+                duration: Duration(milliseconds: _animationDuration),
+                opacity: _opacity,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: kDefaultAppColor,
+                            disabledBackgroundColor: Colors.grey,
+                            fixedSize: const Size(double.maxFinite, double.infinity),
+                            textStyle: const TextStyle(fontSize: 30.0),
+                          ),
+                          onPressed: () {
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              PageTransition(child: const Home(), type: PageTransitionType.fade),
+                              (route) => false,
+                            );
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: Text(
+                              '시간표 만들기',
+                              style: TextStyle(fontFamily: 'GmarketSansTTFMedium', fontSize: 20.0),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

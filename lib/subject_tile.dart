@@ -43,9 +43,7 @@ class _SubjectTileState extends State<SubjectTile> {
           return const Center(
             child: Text(
               '전공/영역을 선택해주세요',
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
+              style: TextStyle(fontFamily: kDefaultFont, fontSize: 15.0),
             ),
           );
         }
@@ -79,18 +77,21 @@ class _SubjectTileState extends State<SubjectTile> {
                           children: <TextSpan>[
                             TextSpan(
                               text: '${subjectData['name'].toString()}\n',
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: const TextStyle(fontFamily: kDefaultFontBold),
                             ),
                             TextSpan(
-                              text: '${subjectData['professor'].toString()}\n',
-                            )
+                                text: '${subjectData['professor'].toString()}\n',
+                                style: const TextStyle(
+                                  fontFamily: kDefaultFont,
+                                ))
                           ],
                         ),
                       ),
                       subtitle: Text(
-                          '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}'),
+                          '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}',
+                          style: const TextStyle(
+                            fontFamily: kDefaultFont,
+                          )),
                     ),
                   ),
                   Padding(
@@ -110,13 +111,20 @@ class _SubjectTileState extends State<SubjectTile> {
                             cartList.add(subjectData);
                             cartLength.value = cartList.length;
                             const snackBar = SnackBar(
-                              content: Text('장바구니에 담았습니다.',),
+                              content: Text(
+                                '장바구니에 담았습니다.',
+                              ),
                               duration: Duration(seconds: 1),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           }
                         },
-                        child: const Text('담기'),
+                        child: const Text(
+                          '담기',
+                          style: TextStyle(
+                            fontFamily: kDefaultFont,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -181,6 +189,4 @@ class _SubjectTileState extends State<SubjectTile> {
       toastDuration: const Duration(seconds: 2),
     );
   }
-
-
 }

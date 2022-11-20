@@ -13,7 +13,6 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
-
   @override
   Widget build(BuildContext context) {
     if (cartList.isEmpty) {
@@ -43,17 +42,24 @@ class _CartState extends State<Cart> {
                               TextSpan(
                                 text: '${subjectData['name'].toString()}\n',
                                 style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontFamily: kDefaultFontBold,
                                 ),
                               ),
                               TextSpan(
                                 text: '${subjectData['professor'].toString()}\n',
-                              )
+                                style: const TextStyle(
+                                  fontFamily: kDefaultFont,
+                                ),
+                              ),
                             ],
                           ),
                         ),
                         subtitle: Text(
-                            '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}'),
+                          '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}',
+                          style: const TextStyle(
+                            fontFamily: kDefaultFont,
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
@@ -72,12 +78,19 @@ class _CartState extends State<Cart> {
                             });
                             cartLength.value = cartList.length;
                             const snackBar = SnackBar(
-                              content: Text('장바구니에서 과목을 지웠습니다.',),
+                              content: Text(
+                                '장바구니에서 과목을 지웠습니다.',
+                              ),
                               duration: Duration(seconds: 1),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           },
-                          child: const Text('취소'),
+                          child: const Text(
+                            '취소',
+                            style: TextStyle(
+                              fontFamily: kDefaultFont,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -106,7 +119,10 @@ class _CartState extends State<Cart> {
                 },
                 child: const Padding(
                   padding: EdgeInsets.all(10.0),
-                  child: Text('시간표 조합'),
+                  child: Text('시간표 조합',
+                      style: TextStyle(
+                        fontFamily: kDefaultFont,
+                      )),
                 ),
               ),
             ),

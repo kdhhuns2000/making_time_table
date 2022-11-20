@@ -28,7 +28,7 @@ class DeptList extends StatelessWidget {
           '전공/영역',
           style: TextStyle(
             color: Colors.black,
-            fontWeight: FontWeight.bold,
+            fontFamily: kDefaultFontBold,
           ),
         ),
         centerTitle: true,
@@ -65,7 +65,7 @@ class DeptList extends StatelessWidget {
                     child: Center(
                       child: Text(
                         deptList[index],
-                        style: const TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
+                        style: TextStyle(fontFamily: kDefaultFont, fontSize: kFilterListFontSize, color: Colors.black),
                       ),
                     ),
                   ),

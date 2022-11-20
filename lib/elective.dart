@@ -28,6 +28,7 @@ class ElectiveList extends StatelessWidget {
   const ElectiveList({
     super.key,
   });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,9 +51,9 @@ class ElectiveList extends StatelessWidget {
         ],
         title: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black,
-            fontWeight: FontWeight.bold,
+            fontFamily: kDefaultFontBold,
           ),
         ),
         centerTitle: true,
@@ -75,7 +76,11 @@ class ElectiveList extends StatelessWidget {
               child: Center(
                 child: Text(
                   electiveMap[index],
-                  style: const TextStyle(fontSize: kFilterListFontSize, color: Colors.black),
+                  style: const TextStyle(
+                    fontFamily: kDefaultFont,
+                    fontSize: kFilterListFontSize,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             );
