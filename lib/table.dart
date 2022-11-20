@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 import 'algorithm.dart';
+import 'constants.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter/material.dart';
+import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
 List week = ['월', '화', '수', '목', '금'];
 var kColumnLength = 22;
@@ -20,6 +21,13 @@ class TableWidget extends StatefulWidget {
 class _TableWidgetState extends State<TableWidget> {
   late int _selectedPage;
   late final PageController _pageController;
+  final List<String> items = [
+    'Item1',
+    'Item2',
+    'Item3',
+    'Item4',
+  ];
+  String? selectedValue;
 
   @override
   void initState() {
@@ -40,15 +48,74 @@ class _TableWidgetState extends State<TableWidget> {
             itemBuilder: (BuildContext context, int index) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      '시간표 ${index + 1}',
-                      style: const TextStyle(
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.bold,
+                    padding: const EdgeInsets.only(bottom: 16.0),
+                    child: Container(
+                      color: kDefaultAppColor,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Flexible(
+                            flex: 5,
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Text(
+                                '시간표 ${index + 1}',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30.0,
+                                  fontFamily: kDefaultFontBold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            flex: 3,
+                            child: DropdownButtonFormField2(
+                              decoration: const InputDecoration(
+                                isDense: true,
+                                contentPadding: EdgeInsets.zero,
+                                border: InputBorder.none,
+                                filled: true,
+                                fillColor: Color(0xFFCC668B),
+                              ),
+                              isExpanded: true,
+                              hint: const Text(
+                                '정렬',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                              icon: const Icon(
+                                Icons.arrow_drop_down,
+                                color: Colors.black45,
+                              ),
+                              iconSize: 30,
+                              buttonHeight: 40,
+                              buttonPadding: const EdgeInsets.only(right: 10),
+                              dropdownDecoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              items: items
+                                  .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontFamily: kDefaultFont,
+                                          ),
+                                        ),
+                                      ))
+                                  .toList(),
+                              onChanged: (value) {
+                                print(value);
+                              },
+                              onSaved: (value) {
+                                selectedValue = value.toString();
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
