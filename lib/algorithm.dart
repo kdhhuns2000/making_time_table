@@ -6,7 +6,6 @@ Map<String, List> lectureValue = {};
 List overLabList = [];
 List pageList = [];
 
-
 // original
 // void Calculate2() {
 //   Combination();
@@ -107,8 +106,29 @@ void Calculate() {
         }
       });
     }
-    pageList.add(subjectTable);
+    if (Valid(subjectTable)) {
+      pageList.add(subjectTable);
+    }
   }
+}
+
+// 유효성 검사
+bool Valid(List list) {
+  bool valid = true;
+  for (int i = 0; i < 5; i++) {
+    List<bool> time = List.generate(300, (index) => false);
+    subjectTable[i].forEach((day) {
+      for (int j = int.parse(day['start']); j < int.parse(day['end']); j++) {
+        if (time[j + 1] == true) {
+          valid = false;
+          break;
+        } else {
+          time[j + 1] = true;
+        }
+      }
+    });
+  }
+  return valid;
 }
 
 // 정렬 알고리즘
