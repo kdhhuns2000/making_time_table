@@ -28,76 +28,79 @@ class _CartState extends State<Cart> {
       return Column(
         children: [
           Expanded(
-            child: ListView.separated(
-              itemCount: cartList.length,
-              itemBuilder: (BuildContext context, int index) {
-                var subjectData = cartList[index];
-                return Row(
-                  children: [
-                    Expanded(
-                      child: ListTile(
-                        title: Text.rich(
-                          TextSpan(
-                            children: <TextSpan>[
-                              TextSpan(
-                                text: '${subjectData['name'].toString()}\n',
-                                style: const TextStyle(
-                                  fontFamily: kDefaultFontBold,
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: ListView.separated(
+                itemCount: cartList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  var subjectData = cartList[index];
+                  return Row(
+                    children: [
+                      Expanded(
+                        child: ListTile(
+                          title: Text.rich(
+                            TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: '${subjectData['name'].toString()}\n',
+                                  style: const TextStyle(
+                                    fontFamily: kDefaultFontBold,
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: '${subjectData['professor'].toString()}\n',
-                                style: const TextStyle(
-                                  fontFamily: kDefaultFont,
+                                TextSpan(
+                                  text: '${subjectData['professor'].toString()}\n',
+                                  style: const TextStyle(
+                                    fontFamily: kDefaultFont,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        subtitle: Text(
-                          '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}',
-                          style: const TextStyle(
-                            fontFamily: kDefaultFont,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16.0),
-                        child: TextButton(
-                          style: TextButton.styleFrom(
-                            foregroundColor: Colors.black,
-                            backgroundColor: Colors.black12,
-                            textStyle: const TextStyle(fontSize: kClipRRectFontSize),
-                          ),
-                          onPressed: () {
-                            setState(() {
-                              cartList.removeWhere((element) => element['id'] == subjectData['id']);
-                            });
-                            //cartLength.value = cartList.length;
-                            const snackBar = SnackBar(
-                              content: Text(
-                                '장바구니에서 과목을 지웠습니다.',
-                              ),
-                              duration: Duration(seconds: 1),
-                            );
-                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                          },
-                          child: const Text(
-                            '취소',
-                            style: TextStyle(
+                          subtitle: Text(
+                            '${subjectData['time'].toString()}\n${subjectData['place']}\n${subjectData['type']} ${subjectData['credit']}학점 ${subjectData['code']}',
+                            style: const TextStyle(
                               fontFamily: kDefaultFont,
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                );
-              },
-              separatorBuilder: (BuildContext context, int index) => const Divider(thickness: 1.0),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16.0),
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.black,
+                              backgroundColor: Colors.black12,
+                              textStyle: const TextStyle(fontSize: kClipRRectFontSize),
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                cartList.removeWhere((element) => element['id'] == subjectData['id']);
+                              });
+                              //cartLength.value = cartList.length;
+                              const snackBar = SnackBar(
+                                content: Text(
+                                  '장바구니에서 과목을 지웠습니다.',
+                                ),
+                                duration: Duration(seconds: 1),
+                              );
+                              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                            },
+                            child: const Text(
+                              '취소',
+                              style: TextStyle(
+                                fontFamily: kDefaultFont,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) => const Divider(thickness: 1.0),
+              ),
             ),
           ),
           Padding(

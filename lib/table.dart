@@ -48,7 +48,7 @@ class _TableWidgetState extends State<TableWidget> {
             itemBuilder: (BuildContext context, int index) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16.0),
@@ -143,18 +143,26 @@ class _TableWidgetState extends State<TableWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: PageViewDotIndicator(
-            currentItem: _selectedPage,
-            count: pageList.length != 0 ? pageList.length : 1,
-            unselectedColor: Colors.black26,
-            selectedColor: kDefaultAppColor,
-            size: const Size(12, 12),
-            unselectedSize: const Size(8, 8),
-            duration: const Duration(milliseconds: 200),
-            margin: const EdgeInsets.symmetric(horizontal: 8),
-            alignment: Alignment.topCenter,
-            fadeEdges: false,
+          padding: const EdgeInsets.only(bottom: 32.0),
+          child: Row(
+            children: [
+              Expanded(child: SizedBox()),
+              Expanded(
+                child: PageViewDotIndicator(
+                  currentItem: _selectedPage,
+                  count: pageList.length != 0 ? pageList.length : 1,
+                  unselectedColor: Colors.black26,
+                  selectedColor: kDefaultAppColor,
+                  size: const Size(12, 12),
+                  unselectedSize: const Size(8, 8),
+                  duration: const Duration(milliseconds: 200),
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                  alignment: Alignment.topCenter,
+                  fadeEdges: false,
+                ),
+              ),
+              Expanded(child: SizedBox()),
+            ],
           ),
         ),
       ],
