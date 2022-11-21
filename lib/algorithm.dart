@@ -1,7 +1,7 @@
 import 'cart.dart';
 import 'constants.dart';
 
-List subjectTable = List.generate(5, (index) => []);
+List subjectTable = [];
 Map<String, List> lectureValue = {};
 List overLabList = [];
 List pageList = [];
@@ -36,14 +36,12 @@ Map<String, List> OverLapCheck() {
     if (lectureValue[subject['name']] != null) {
       lectureValue[subject['name']]?.add(subject['id']);
     }
-    print(subject['name'] + " " + lectureValue[subject['name']].toString());
   });
   List lectureList = [];
   lectureValue.forEach((key, value) {
     lectureList.add({});
     lectureList[lectureList.length - 1][key] = value;
   });
-  print(lectureValue.keys.toList());
   return lectureValue;
 }
 
@@ -56,8 +54,6 @@ void Combination() {
   tmp = [];
   overLabList = [];
   dfs(0);
-  print(overLabList);
-  print(overLabList[0].length);
 }
 
 // 전공 중복 순열하여 조합하는 알고리즘
@@ -81,12 +77,10 @@ void dfs(int cnt) {
 void Calculate() {
   pageList = [];
   Combination();
-  print("오버랩 길이 " + overLabList.length.toString());
   for (int i = 0; i < overLabList.length; i++) {
-    subjectTable = List.generate(5, (index) => []);
+    subjectTable = List.generate(6, (index) => []);
     int index = -1;
 
-    print(overLabList.length);
     for (int j = 0; j < overLabList[i].length; j++) {
       cartList.forEach((subject) {
         if (subject['id'] == overLabList[i][j]) {
@@ -108,6 +102,7 @@ void Calculate() {
     }
     if (Valid(subjectTable)) {
       pageList.add(subjectTable);
+      subjectTable[5] = addLectureRate(overLabList[i]);
     }
   }
 }
@@ -131,4 +126,87 @@ bool Valid(List list) {
   return valid;
 }
 
-// 정렬 알고리즘
+// 강의평점 추가
+double addLectureRate(List list) {
+  double averageLectureRate = 0.0;
+  int nonZeroLectureRateCount = 0;
+  list.forEach((id) {
+    cartList.forEach((subject) {
+      if (subject['id'] == id) {
+        if (subject['lectureRate'] != '0') {
+          nonZeroLectureRateCount++;
+          averageLectureRate += double.parse(subject['lectureRate']);
+        }
+      }
+    });
+  });
+  averageLectureRate /= nonZeroLectureRateCount;
+  return averageLectureRate;
+}
+
+// 공강 정렬 알고리즘
+void GapSort() {
+  pageList.sort((a, b) {
+    int aGapValue = 0, bGapValue = 0;
+    for (int i = 0; i < 5; i++) {
+      if (a[i].length == 0) {
+        aGapValue++;
+      }
+      if (b[i].length == 0) {
+        bGapValue++;
+      }
+    }
+    return bGapValue.compareTo(aGapValue);
+  });
+}
+
+// 강의평 정렬 알고리즘
+void LectureRateSort() {
+  pageList.sort((a, b) => b[5].compareTo(a[5]));
+}
+
+// 늦은 등교 정렬 알고리즘
+void LateBeforeSort() {
+  pageList.sort((a, b) {
+    int aLatest = 300, bLatest = 300;
+    for (int i = 0; i < 5; i++) {
+      a[i].sort((c, d) => int.parse(c['start']).compareTo(int.parse(d['start'])));
+      b[i].sort((c, d) => int.parse(c['start']).compareTo(int.parse(d['start'])));
+      if (a[i].length != 0) {
+        if (aLatest > int.parse(a[i][0]['start'])) {
+          aLatest = int.parse(a[i][0]['start']);
+        }
+      }
+      if (b[i].length != 0) {
+        if (bLatest > int.parse(b[i][0]['start'])) {
+          bLatest = int.parse(b[i][0]['start']);
+        }
+      }
+    }
+    return bLatest.compareTo(aLatest);
+  });
+}
+
+// 빠른 하교 정렬 알고리즘
+void EarlyAfterSort() {
+  pageList.sort((a, b) {
+    int aEarliest = 0, bEarliest = 0;
+    for (int i = 0; i < 5; i++) {
+      a[i].sort((c, d) => int.parse(d['end']).compareTo(int.parse(c['end'])));
+      b[i].sort((c, d) => int.parse(d['end']).compareTo(int.parse(c['end'])));
+      print(a[i]);
+      print(b[i]);
+      if (a[i].length != 0) {
+        if (aEarliest < int.parse(a[i][0]['end'])) {
+          aEarliest = int.parse(a[i][0]['end']);
+        }
+      }
+      if (b[i].length != 0) {
+        if (bEarliest < int.parse(b[i][0]['end'])) {
+          bEarliest = int.parse(b[i][0]['end']);
+        }
+      }
+    }
+    return aEarliest.compareTo(bEarliest);
+  });
+}

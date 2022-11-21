@@ -22,10 +22,10 @@ class _TableWidgetState extends State<TableWidget> {
   late int _selectedPage;
   late final PageController _pageController;
   final List<String> items = [
-    'Item1',
-    'Item2',
-    'Item3',
-    'Item4',
+    '공강',
+    '강의평',
+    '늦은 등교',
+    '빠른 하교',
   ];
   String? selectedValue;
 
@@ -62,7 +62,7 @@ class _TableWidgetState extends State<TableWidget> {
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Text(
-                                '시간표 ${index + 1}',
+                                '시간표 ${index + 1}/${pageList.length}',
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 30.0,
@@ -96,6 +96,7 @@ class _TableWidgetState extends State<TableWidget> {
                               dropdownDecoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                               ),
+                              value: selectedValue,
                               items: items
                                   .map((item) => DropdownMenuItem<String>(
                                         value: item,
@@ -108,10 +109,18 @@ class _TableWidgetState extends State<TableWidget> {
                                       ))
                                   .toList(),
                               onChanged: (value) {
-                                print(value);
-                              },
-                              onSaved: (value) {
-                                selectedValue = value.toString();
+                                selectedValue = value as String;
+                                setState(() {
+                                  if (value == '공강') {
+                                    GapSort();
+                                  } else if (value == '강의평') {
+                                    LectureRateSort();
+                                  } else if (value == '늦은 등교') {
+                                    LateBeforeSort();
+                                  } else if (value == '빠른 하교') {
+                                    EarlyAfterSort();
+                                  }
+                                });
                               },
                             ),
                           ),
@@ -161,7 +170,12 @@ class _TableWidgetState extends State<TableWidget> {
                   fadeEdges: false,
                 ),
               ),
-              Expanded(child: SizedBox()),
+              Expanded(
+                child: Text(
+                  '평균 강의평점 ${pageList[_selectedPage][5].isNaN ? '없음' : pageList[_selectedPage][5].toStringAsFixed(2)}',
+                  style: TextStyle(fontFamily: kDefaultFont),
+                ),
+              ),
             ],
           ),
         ),
@@ -256,7 +270,9 @@ class _TableWidgetState extends State<TableWidget> {
                 top: kTableFirstColumnHeight + (kBoxSize * (int.parse(pageList[page][index][i]['start']) - 108) / 12),
                 // 1 kBoxSize / 1시간
                 //height: kBoxSize + kBoxSize, -> 2시간
-                height: kBoxSize * (int.parse(pageList[page][index][i]['end']) - int.parse(pageList[page][index][i]['start'])) / 12,
+                height: kBoxSize *
+                    (int.parse(pageList[page][index][i]['end']) - int.parse(pageList[page][index][i]['start'])) /
+                    12,
                 width: 100,
                 child: Container(
                   color: pageList[page][index][i]['color'],
